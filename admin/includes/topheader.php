@@ -117,10 +117,7 @@
   Visit My Website : developerrony.com 
 -->
                     </ul>
-                    <ul class="nav navbar-nav" style=" width: 50%; margin-top: 23px; color: red;">
-                        <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"><b>Today Trending News : </b>Online news portal. Besides, the only owner of this code is Code Camp BD or MH RONY. </marquee>
-                        <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"><b> Notes : </b>This is an educational project from where you can gain knowledge. No one can claim it as their own or sell it for their own sake. If you want to create any project, contact us through Facebook, YouTube or website.</marquee>
-                    </ul>
+                   
 
                     <div id="google_translate_element">
 

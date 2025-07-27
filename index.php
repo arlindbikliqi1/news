@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo.webp" type="image/x-icon">
     <title>Live News Portal| Home Page</title>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -145,8 +145,6 @@
                     </div>
                     <?php } ?>
                     <div class="col-md-12"><a href="tel:+8801608445456">
-                            <img src="images/ads.jpg" class="img-fluid"></a>
-
                         <!-- Pagination -->
                         <!-- <ul class="pagination justify-content-center mb-4">
                         <li class="page-item"><a href="?pageno=1"  class="page-link border-0">First</a></li>
@@ -179,8 +177,6 @@
                         </div>
                     </div>
                 </div>
-                <a href="tel:+8801608445456">
-                    <img src="images/ads.jpg" class="img-fluid"></a>
             </div>
             <!-- Sidebar Widgets Column -->
             <?php include('includes/sidebar.php');?>

@@ -1,13 +1,4 @@
-<!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
 <div class="col-md-3 ">
-    <!-- Search Widget -->
-    <!-- <h4 class="widget-title mb-5">Don't <span>Miss</span></h4> -->
-
     <div class="card mb-4 border-0">
         <h5 class="card-header border-0 bg-white">Search</h5>
         <div class="card-body">
@@ -21,15 +12,6 @@
         </div>
     </div>
 </div>
-<!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
-<a href="tel:+8801608445456">
-    <img src="images/ads.jpg" class="img-fluid"></a>
-
 <!-- Side Widget -->
 <div class="card my-4 border-0">
     <h5 class="card-header border-0 bg-white">Recent News</h5>
@@ -48,15 +30,7 @@
         </ul>
     </div>
 </div>
-<a href="tel:+8801608445456">
-    <img src="images/ads.jpg" class="img-fluid"></a>
-<!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
-<!-- Side Widget -->
+
 <div class="card my-4 border-0">
     <h5 class="card-header border-0 bg-white">Popular News</h5>
     <div class="card-body">
@@ -74,10 +48,6 @@
     </div>
 </div>
 
-<a href="tel:+8801608445456">
-    <img src="images/ads.jpg" class="img-fluid"></a>
-
-<!-- Side Widget -->
 <div class="card my-4 border-0">
     <h5 class="card-header border-0 bg-white">Top Trending</h5>
     <div class="card-body">
@@ -95,15 +65,8 @@
         </ul>
     </div>
 </div>
-<!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
 
-<a href="tel:+8801608445456">
-    <img src="images/ads.jpg" class="img-fluid"></a>
+
 
 <h5 class="card-header border-0 bg-transparent">Most Popular</h5>
 <div class="card my-4 border-0">
@@ -111,40 +74,22 @@
         <iframe width="100%" height="180px" class="youtube" src="https://www.youtube.com/embed/h3xcb_lojMQ" title="Sample Videos / Dummy Videos For Demo Use" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
-<a href="tel:+8801608445456">
-    <img src="images/ads.jpg" class="img-fluid"></a>
+
 <div class="card my-4 border-0">
     <div class="card-body p-2">
         <iframe width="100%" height="180px" class="youtube" src="https://www.youtube.com/embed/8ipv81cdGSE" title="Sample Videos / Dummy Videos For Demo Use" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
-
-<a href="tel:+8801608445456">
-    <img src="images/ads.jpg" class="img-fluid"></a>
-<!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
 <div class="card my-4 border-0">
     <div class="card-body p-2">
         <iframe width="100%" height="180px" class="youtube" src="https://www.youtube.com/embed/ra84Xw-dd4Y" title="Sample Videos / Dummy Videos For Demo Use" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
-<a href="tel:+8801608445456">
-    <img src="images/ads.jpg" class="img-fluid"></a>
 <div class="card my-4 border-0">
     <div class="card-body p-2">
         <iframe width="100%" height="180px" class="youtube" src="https://www.youtube.com/embed/LkdDSqa-oSs" title="Sample Videos / Dummy Videos For Demo Use" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
-<!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
 <div class="card my-4 border-0">
     <div class="card-body p-2">
         <iframe width="100%" height="180px" class="youtube" src="https://www.youtube.com/embed/cQNX1PgWqL4" title="Sample Videos / Dummy Videos For Demo Use" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -56,14 +56,7 @@ echo "<script>alert('Invalid Details');</script>";
 
     <!-- HOME -->
     <section>
-        <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
+
         <div class="container m-t-50">
             <div class="row align-items-center m-t-50">
                 <div class="col-md-8 text-center">
@@ -72,32 +65,18 @@ echo "<script>alert('Invalid Details');</script>";
                 <div class="col-md-4 ">
 
                     <div class="wrapper-page">
-                        <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
+                      
+
                         <div class="m-t-40 account-pages">
                             <div class="account-logo-box">
                                 <h2 class="text-uppercase">
                                     <a href="index.php" class="text-success">
-                                        <span><img src="assets/images/logo.png" alt="" width="350px"></span>
                                     </a>
                                 </h2>
                                 <p>Please sign-in to your account and start the adventure</p>
                                 <!--<h4 class="text-uppercase font-bold m-b-0">Sign In</h4>-->
                             </div>
-                            <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
+
                             <div class="account-content">
                                 <form class="form-horizontal" method="post">
                                     <div class="form-group ">
@@ -114,14 +93,6 @@ echo "<script>alert('Invalid Details');</script>";
                                         </div>
                                     </div>
 
-                                    <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
 
                                     <div class="form-group account-btn text-center m-t-10">
                                         <div class="col-xs-12">
@@ -135,17 +106,7 @@ echo "<script>alert('Invalid Details');</script>";
                                 </div>
                             </div>
                         </div>
-                        <!-- end card-box-->
 
-
-                        <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
 
                     </div>
                     <!-- end wrapper -->
@@ -154,15 +115,7 @@ echo "<script>alert('Invalid Details');</script>";
             </div>
         </div>
     </section>
-    <!-- END HOME -->
-    <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
+
     <script>
     var resizefunc = [];
     </script>
@@ -180,14 +133,7 @@ echo "<script>alert('Invalid Details');</script>";
     <!-- App js -->
     <script src="assets/js/jquery.core.js"></script>
     <script src="assets/js/jquery.app.js"></script>
-    <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
+
 </body>
 
 </html>

@@ -1,109 +1,93 @@
-<!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
-<div class="footer-area pt-3 bg-white mb-5">
-    <div class="container-fluid">
-        <br>
-
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <div class="container">
         <div class="row">
-
-
-            <div class="col">
-                <a class="navbar-brand" href="index.php"><img src="images/logo.png" height="65"></a>
-                <ul class="float-left list-unstyled ">
-
-                    <li class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum id vitae fugiat, </li>
-
-
+            <div class="col-md-4 mb-4">
+                <h5 class="font-weight-bold mb-4">About News Portal</h5>
+                <p>News Portal is your trusted source for breaking news, investigative reports, global events and engaging stories.</p>
+                <div class="social-links mt-4">
+                    <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                    <a href="#" class="text-white mr-3"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="text-white mr-3"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-4">
+                <h5 class="font-weight-bold mb-4">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.php" class="text-white">Home</a></li>
+                    <li class="mb-2"><a href="about-us.php" class="text-white">About Us</a></li>
+                    <li class="mb-2"><a href="contact-us.php" class="text-white">Contact</a></li>
+                    <li class="mb-2"><a href="#" class="text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="text-white">Terms of Service</a></li>
                 </ul>
             </div>
-            <div class="col">
-                <ul class="float-left list-unstyled ">
-                    <li class="mb-2"><a class="text-dark" href="#">Healthy Living</a></li>
-                    <li class="mb-2"><a class="text-dark" href="#">Medical Research</a></li>
-                    <li class="mb-2"><a class="text-dark" href="#">Children’s Health</a></li>
-
+            <div class="col-md-3 mb-4">
+                <h5 class="font-weight-bold mb-4">Categories</h5>
+                <ul class="list-unstyled">
+                    <?php 
+                    $query=mysqli_query($con,"select id,CategoryName from tblcategory limit 4");
+                    while($row=mysqli_fetch_array($query)) {
+                    ?>
+                    <li class="mb-2"><a href="category.php?catid=<?php echo htmlentities($row['id'])?>" class="text-white"><?php echo htmlentities($row['CategoryName']);?></a></li>
+                    <?php } ?>
                 </ul>
             </div>
-            <div class="col">
-                <ul class="float-left list-unstyled ">
-                    <li class="mb-2"><a href="#" class="text-dark">Real Estate</a></li>
-                    <li class="mb-2"><a href="#" class="text-dark">Commercial</a></li>
-                    <li class="mb-2"><a href="#" class="text-dark">Find A Home</a></li>
-
+            <div class="col-md-3 mb-4">
+                <h5 class="font-weight-bold mb-4">Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="fas fa-map-marker-alt mr-2"></i> 123 Main Street, City, Country</li>
+                    <li class="mb-3"><i class="fas fa-phone mr-2"></i> (123) 456-7890</li>
+                    <li class="mb-3"><i class="fas fa-envelope mr-2"></i> info@newsportal.com</li>
                 </ul>
             </div>
-            <div class="col">
-                <ul class="float-left list-unstyled ">
-                    <li class="mb-2"><a href="#" class="text-dark">U.S.</a></li>
-                    <li class="mb-2"><a href="#" class="text-dark">Politics</a></li>
-                    <li class="mb-2"><a href="#" class="text-dark">N.Y.</a></li>
-
-                </ul>
-            </div>
-
-
         </div>
-
-        <div style=" padding: 10px; margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-    
-    align-items: center;">
-            <p style="text-align: center; "> CopyRight by <a href="https://www.youtube.com/@codecampbdofficial">Code Camp BD</a> Design and Developer <a href="https://developerrony.com">MH RONY</a> All Resalve
-                <?php echo "20".date("y"); ?></p>
+        <hr class="bg-light">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="mb-0">© <?php echo date('Y'); ?> News Portal. All rights reserved.</p>
+            </div>
         </div>
     </div>
-</div>
-<!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script type="text/javascript">
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'en'
-    }, 'google_translate_element');
-}
-</script>
-<!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 <style>
-.goog-logo-link {
-    display: none !important;
+/* Footer styles */
+footer a {
+    color: rgba(255,255,255,0.7);
+    transition: all 0.3s;
 }
 
-.goog-te-gadget {
-    color: transparent;
+footer a:hover {
+    color: white;
+    text-decoration: none;
 }
 
-.goog-te-gadget .goog-te-combo {
-    margin: 0px 0;
-    padding: 8px;
-    color: #000;
-    background: #eeee;
+.social-links a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s;
 }
 
-#google_translate_element {
-    padding-top: 13px;
-    position: absolute;
-    top: 7px;
-    right: 100px;
+.social-links a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-3px);
 }
+
+hr {
+    margin: 15px 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
 </style>
-<!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
+

@@ -10,14 +10,8 @@
        ?>
 <?php include('includes/topheader.php');?>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-<!-- ========== Left Sidebar Start ========== -->
 <?php include('includes/leftsidebar.php');?>
-<!-- Left Sidebar End -->
-<!-- ============================================================== -->
-<!-- Start right Content here -->
-<!-- ============================================================== -->
 <div class="content-page">
-    <!-- Start content -->
     <div class="content">
         <div class="container">
             <div class="row">
@@ -39,37 +33,22 @@
                     </div>
                 </div>
             </div>
-            <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
-            <!-- end row -->
+             
+
             <div class="row">
                 <div class="col-md-4">
                     <div class="card-box h-100">
                         <div class="card-header">
-                            <h2 class="card-title mb-2">Welcome MH RONY </h2>
-                            <span class="d-block mb-4 text-nowrap">Freelancer from Bangladesh</span>
+                            <h2 class="card-title mb-2">Welcome Arlind Bikliqi </h2>
+                            <span class="d-block mb-4 text-nowrap">News</span>
                         </div>
                         <br><br>
-                        <!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
                         <div class="card-body">
                             <div class="row ">
                                 <div class="col-md-6">
-                                    <h1 class="display-6 text-primary mb-2 pt-4 pb-1">2+ Years of Exprience</h1>
-                                    <small class="d-block mb-3">In <br>PHP, Laravel, Python, Dart, Flutter, C and Etc.</small>
+                                    <h1 class="display-6 text-primary mb-2 pt-4 pb-1">Live News</h1>
                                     <br>
                                     <br>
-                                    <a href="https://developerrony.com/" target="a_blank" class="btn btn-sm btn-primary">Visit Website</a>
                                 </div>
                                 <div class="col-md-6">
                                     <img src="assets/images/prize-light.png" width="140" height="150" class="rounded-start">
@@ -78,14 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
+
                 <div class="col-md-4">
                     <div class="card-box h-100">
                         <div class="card-body">
