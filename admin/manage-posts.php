@@ -1,11 +1,4 @@
-        <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
---><?php 
+<?php 
    session_start();
    include('includes/config.php');
    error_reporting(0);
@@ -28,23 +21,10 @@
    } 
    }
    ?>
-        <!--  
-   Author Name: MH RONY.
-   GigHub Link: https://github.com/dev-mhrony
-   Facebook Link:https://www.facebook.com/dev.mhrony
-   Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-   for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-   Visit My Website : developerrony.com 
- -->
-        <!-- Top Bar Start -->
+
         <?php include('includes/topheader.php');?>
-        <!-- ========== Left Sidebar Start ========== -->
         <?php include('includes/leftsidebar.php');?>
-        <!-- ============================================================== -->
-        <!-- Start right Content here -->
-        <!-- ============================================================== -->
-        <div class="content-page">
-            <!-- Start content -->
+       <div class="content-page">
             <div class="content">
                 <div class="container">
                     <div class="row">
@@ -66,79 +46,62 @@
                             </div>
                         </div>
                     </div>
-                    <!-- end row -->
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="card-box">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered" id="example">
-                                        <thead>
-                                            <tr>
-                                                <th>Title</th>
-                                                <th>Category</th>
-                                                <th>Subcategory</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                           $query=mysqli_query($con,"select tblposts.id as postid,tblposts.PostTitle as title,tblcategory.CategoryName as category,tblsubcategory.Subcategory as subcategory from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join tblsubcategory on tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.Is_Active=1 ");
-                           $rowcount=mysqli_num_rows($query);
-                           if($rowcount==0)
-                           {
-                           ?>
-                                            <!--  
-                           Author Name: MH RONY.
-                           GigHub Link: https://github.com/dev-mhrony
-                           Facebook Link:https://www.facebook.com/dev.mhrony
-                           Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                           for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                           Visit My Website : developerrony.com 
-                         -->
-                                            <tr>
-                                                <td colspan="4" align="center">
-                                                    <h3 style="color:red">No record found</h3>
-                                                </td>
-                                            <tr>
-                                                <?php 
-                              } else {
-                              while($row=mysqli_fetch_array($query))
-                              {
-                              ?>
-                                                <!--  
-                              Author Name: MH RONY.
-                              GigHub Link: https://github.com/dev-mhrony
-                              Facebook Link:https://www.facebook.com/dev.mhrony
-                              Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                              for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                              Visit My Website : developerrony.com 
-                            -->
-                                            <tr>
-                                                <td><?php echo htmlentities($row['title']);?></td>
-                                                <td><?php echo htmlentities($row['category'])?></td>
-                                                <td><?php echo htmlentities($row['subcategory'])?></td>
-                                                <td><a class="btn btn-primary btn-sm" href="edit-post.php?pid=<?php echo htmlentities($row['postid']);?>"><i class="fa fa-pencil"></i></a>
-                                                    &nbsp;<a class="btn btn-danger btn-sm" href="manage-posts.php?pid=<?php echo htmlentities($row['postid']);?>&&action=del" onclick="return confirm('Do you reaaly want to delete ?')"> <i class="fa fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                            <?php } }?>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- container -->
-            </div>
-            <!-- content -->
+
+<div class="table-responsive">
+    <table class="table table-bordered" id="example">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Subcategory</th>
+                <th>Status</th> 
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $query = mysqli_query($con, "SELECT tblposts.id AS postid, tblposts.PostTitle AS title,
+                                        tblcategory.CategoryName AS category, tblsubcategory.Subcategory AS subcategory,
+                                        tblposts.Is_Active AS status
+                                        FROM tblposts 
+                                        LEFT JOIN tblcategory ON tblcategory.id = tblposts.CategoryId 
+                                        LEFT JOIN tblsubcategory ON tblsubcategory.SubCategoryId = tblposts.SubCategoryId 
+                                        WHERE tblposts.Is_Active = 1");
+            $rowcount = mysqli_num_rows($query);
+            if($rowcount == 0) {
+            ?>
+            <tr>
+                <td colspan="5" align="center">
+                    <h3 style="color:red">No active posts found</h3>
+                </td>
+            <tr>
+            <?php 
+            } else {
+                while($row = mysqli_fetch_array($query)) {
+            ?>
+            <tr>
+                <td><?php echo htmlentities($row['title']);?></td>
+                <td><?php echo htmlentities($row['category'])?></td>
+                <td><?php echo htmlentities($row['subcategory'])?></td>
+                <td>
+                    <span class="badge badge-success">Active</span>
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="edit-post.php?pid=<?php echo htmlentities($row['postid']);?>">
+                        <i class="fa fa-pencil"></i> Edit
+                    </a>
+                    &nbsp;
+                    <a class="btn btn-danger btn-sm" href="manage-posts.php?pid=<?php echo htmlentities($row['postid']);?>&action=del" onclick="return confirm('Do you really want to delete this post?')"> 
+                        <i class="fa fa-trash-o"></i> Delete
+                    </a>
+                </td>
+            </tr>
+            <?php } } ?>
+        </tbody>
+    </table>
+</div>
             <?php include('includes/footer.php');?>
-            <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
             <?php } ?>

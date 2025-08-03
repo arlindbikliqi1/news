@@ -58,26 +58,39 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="card-box h-100">
-                        <div class="card-body">
-                            <div class="row ">
-                                <div class="card-header">
-                                    <h4 class="card-title m-0">Visits of 2023</h4>
-                                </div>
-                                <div id="chart">
-                                    <apexchart type="radialBar" height="265" :options="chartOptions" :series="series"></apexchart>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
+               <a href="#">
+    <div class="col-md-4">
+        <div class="card-box widget-box-one text-center">
+            <i class="mdi mdi-chart-line widget-one-icon"></i>
+            <div class="wigdet-one-content">
+                <p class="m-0 text-secondary" title="Total Visits">Total Visits</p>
+                <?php 
+                $totalVisitsQuery = mysqli_query($con, "SELECT COUNT(*) as total FROM tblvisits");
+                $totalVisits = mysqli_fetch_assoc($totalVisitsQuery)['total'];
+                ?>
+                <h2><?php echo htmlentities($totalVisits); ?> <small></small></h2>
+            </div>
+        </div>
+    </div>
+</a>
+
+<!-- Today's Visits Widget -->
+<a href="#">
+    <div class="col-md-4">
+        <div class="card-box widget-box-one text-center">
+            <i class="mdi mdi-chart-areaspline widget-one-icon"></i>
+            <div class="wigdet-one-content">
+                <p class="m-0 text-secondary" title="Today's Visits">Today's Visits</p>
+                <?php 
+                $today = date('Y-m-d');
+                $todayVisitsQuery = mysqli_query($con, "SELECT COUNT(*) as total FROM tblvisits WHERE DATE(visit_date) = '$today'");
+                $todayVisits = mysqli_fetch_assoc($todayVisitsQuery)['total'];
+                ?>
+                <h2><?php echo htmlentities($todayVisits); ?> <small></small></h2>
+            </div>
+        </div>
+    </div>
+</a>
                 <a href="manage-categories.php">
                     <div class="col-lg-2 col-md-2 col-sm-6">
                         <div class="card-box widget-box-one text-center">
@@ -107,14 +120,7 @@
                         </div>
                     </div>
                 </a>
-                <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
+
                 <a href="manage-subcategories.php">
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="card-box widget-box-one text-center">
@@ -132,15 +138,9 @@
                 </a>
 
             </div>
-            <!-- end row -->
-            <!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
+
             <div class="row">
-                <!--  <a href="trash-posts.php">
+             <a href="trash-posts.php">
                <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="card-box widget-box-one">
                      <i class="mdi mdi-layers widget-one-icon"></i>
@@ -153,74 +153,52 @@
                      </div>
                   </div>
                </div>
-               </a> -->
+               </a> 
             </div>
             <div class="col-sm-12">
                 <div class="card-box">
                     <h2>Recent News Post</h2>
                     <div class="table-responsive">
-                        <table class="table table-bordered" id="example">
-                            <thead>
-                                <tr>
-                                    <th>Title</th>
-                                    <th>Category</th>
-                                    <th>Subcategory</th>
-
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
-                                <?php
-                           $query=mysqli_query($con,"select tblposts.id as postid,tblposts.PostTitle as title,tblcategory.CategoryName as category,tblsubcategory.Subcategory as subcategory from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join tblsubcategory on tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.Is_Active=1 ");
-                           $rowcount=mysqli_num_rows($query);
-                           if($rowcount==0)
-                           {
-                           ?>
-                                <tr>
-                                    <td colspan="4" align="center">
-                                        <h3 style="color:red">No record found</h3>
-                                    </td>
-                                <tr>
-                                    <?php 
-                              } else {
-                              while($row=mysqli_fetch_array($query))
-                              {
-                              ?>
-                                <tr>
-                                    <td><?php echo htmlentities($row['title']);?></td>
-                                    <td><?php echo htmlentities($row['category'])?></td>
-                                    <td><?php echo htmlentities($row['subcategory'])?></td>
-
-                                </tr>
-                                <?php } }?>
-                            </tbody>
-                        </table>
+                    <table class="table table-bordered" id="example">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Subcategory</th>
+            <th>Visits</th> 
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        $query=mysqli_query($con,"SELECT p.id as postid, p.PostTitle as title,
+                                c.CategoryName as category, s.Subcategory as subcategory,
+                                (SELECT COUNT(*) FROM tblvisits v WHERE v.post_id = p.id) AS visits
+                                FROM tblposts p
+                                LEFT JOIN tblcategory c ON c.id = p.CategoryId
+                                LEFT JOIN tblsubcategory s ON s.SubCategoryId = p.SubCategoryId
+                                WHERE p.Is_Active = 1");
+        while($row=mysqli_fetch_array($query)) {
+        ?>
+        <tr>
+            <td><?php echo htmlentities($row['title']);?></td>
+            <td><?php echo htmlentities($row['category'])?></td>
+            <td><?php echo htmlentities($row['subcategory'])?></td>
+            <td><?php echo htmlentities($row['visits'])?></td> <!-- Display visits -->
+        </tr>
+        <?php } ?>
+    </tbody>
+</table>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- container -->
+ 
     </div>
-    <!-- content -->
+
     <?php include('includes/footer.php');?>
-    <!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
+
 </div>
-<!-- ============================================================== -->
-<!-- End Right content here -->
-<!-- ============================================================== -->
-<!-- Right Sidebar -->
+
 <div class="side-bar right-bar">
     <a href="javascript:void(0);" class="right-bar-toggle">
         <i class="mdi mdi-close-circle-outline"></i>
@@ -236,12 +214,7 @@
                 <input type="checkbox" checked data-plugin="switchery" data-color="#7fc1fc" data-size="small" />
             </div>
         </div>
-        <!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
+
         <div class="row m-t-20">
             <div class="col-xs-8">
                 <h5 class="m-0">API Access</h5>
@@ -260,14 +233,6 @@
                 <input type="checkbox" checked data-plugin="switchery" data-color="#7fc1fc" data-size="small" />
             </div>
         </div>
-        <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
         <div class="row m-t-20">
             <div class="col-xs-8">
                 <h5 class="m-0">Online Status</h5>
@@ -278,59 +243,7 @@
             </div>
         </div>
     </div>
-    <!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
-</div>
-<!-- /Right-bar -->
-</div>
-<!-- END wrapper -->
-<script>
-var options = {
-    series: [44, 55, 67],
-    chart: {
-        height: 265,
-        type: 'radialBar',
-    },
-    plotOptions: {
-        radialBar: {
-            dataLabels: {
-                name: {
-                    fontSize: '40px',
-                },
-                value: {
-                    fontSize: '16px',
-                },
-                total: {
-                    show: true,
-                    label: 'Total',
-                    formatter: function(w) {
-                        // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
-                        return 249
-                    }
-                }
-            }
-        }
-    },
-    labels: ['Apples', 'Oranges', 'Bananas'],
-};
 
-var chart = new ApexCharts(document.querySelector("#chart"), options);
-chart.render();
-</script>
-<!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->
+</div>
+</div>
 <?php } ?>
-<!--  Author Name: MH RONY.
-                        GigHub Link: https://github.com/dev-mhrony
-                        Facebook Link:https://www.facebook.com/dev.mhrony
-                        Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-                        for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-                        Visit My Website : developerrony.com -->

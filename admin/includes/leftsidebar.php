@@ -1,12 +1,4 @@
-            <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
-            <div class="left side-menu">
+      <div class="left side-menu">
                 <div class="sidebar-inner slimscrollleft">
 
                     <!--- Sidemenu -->
@@ -19,14 +11,25 @@
 
                             </li>
 
-                            <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
+                            <li class="has_sub">
+    <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-newspaper"></i> <span> Posts (News) </span> <span class="menu-arrow"></span></a>
+    <ul class="list-unstyled">
+        <li><a href="add-post.php">Add Posts</a></li>
+        <li><a href="manage-posts.php">Manage Posts</a></li>
+        <li><a href="trash-posts.php">Trash Posts</a></li>
+        <!-- Add this new line for slider management -->
+        <li><a href="slidermanage.php">Manage Slider</a></li>
+    </ul>
+</li>
+
+<li class="has_sub">
+    <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-video"></i> <span> Video Management </span> <span class="menu-arrow"></span></a>
+    <ul class="list-unstyled">
+        <li><a href="addvideo.php">Manage Videos</a></li>
+    </ul>
+</li>
+
+
 
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span> Category </span> <span class="menu-arrow"></span></a>
@@ -43,14 +46,7 @@
                                     <li><a href="manage-subcategories.php">Manage Sub Category</a></li>
                                 </ul>
                             </li>
-                            <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
+
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-newspaper"></i> <span> Posts (News) </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
@@ -59,14 +55,6 @@
                                     <li><a href="trash-posts.php">Trash Posts</a></li>
                                 </ul>
                             </li>
-                            <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
 
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="ti ti-files"></i> <span> CMS </span> <span class="menu-arrow"></span></a>
@@ -87,15 +75,6 @@
                     </div>
                     <!-- Sidebar -->
                     <div class="clearfix"></div>
-
-                    <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
 
                 </div>
                 <!-- Sidebar -left -->
