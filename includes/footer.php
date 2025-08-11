@@ -114,6 +114,7 @@
                             <li><a href="privacy-policy.php"><i class="fas fa-shield-alt me-2"></i>Privacy Policy</a></li>
                             <li><a href="terms-of-service.php"><i class="fas fa-file-contract me-2"></i>Terms of Service</a></li>
                             <li><a href="advertise.php"><i class="fas fa-bullhorn me-2"></i>Advertise</a></li>
+                            <li><a href="admin/index.php"><i class="fas fa-bullhorn me-2"></i>Panel</a></li>
                         </ul>
                     </div>
                 </div>
