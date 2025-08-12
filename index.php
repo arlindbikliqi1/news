@@ -11,7 +11,7 @@ include('includes/config.php');
     <meta name="description" content="Stay informed with breaking news, latest updates, and in-depth analysis from around the world">
     <meta name="author" content="News Portal">
     <link rel="shortcut icon" href="images/logo.webp" type="image/x-icon">
-    <title>News Portal - Breaking News & Latest Updates</title>
+    <title>TopCentral.news - Breaking News & Latest Updates</title>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">

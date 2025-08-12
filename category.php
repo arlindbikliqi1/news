@@ -2,9 +2,18 @@
 // category.php
 session_start();
 include('includes/config.php');
-if($_GET['catid']!=''){
-    $_SESSION['catid']=intval($_GET['catid']);
+
+// Check if 'catid' is present in the GET request
+if(isset($_GET['catid']) && $_GET['catid'] != ''){
+    $_SESSION['catid'] = intval($_GET['catid']);
+} elseif (!isset($_SESSION['catid'])) {
+    // If 'catid' is not in GET and not in session, set a default or handle the case
+    // For example, redirect to homepage or display a message
+    // For now, let's set a default if no catid is ever provided
+    // You might want to change this behavior based on your application logic
+    $_SESSION['catid'] = 1; // Example: Set a default category ID
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +22,7 @@ if($_GET['catid']!=''){
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Live News Portal | Category</title>
+    <title>TopCentral.news | Category</title>
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     
     <!-- Fonts -->
@@ -404,10 +413,19 @@ if($_GET['catid']!=''){
                 <!-- Main Content -->
                 <div class="col-lg-9">
                     <?php 
-                    $catid = $_SESSION['catid'];
-                    $catQuery = mysqli_query($con, "SELECT CategoryName FROM tblcategory WHERE id = '$catid'");
-                    $catRow = mysqli_fetch_array($catQuery);
-                    $categoryName = $catRow['CategoryName'];
+                    $categoryName = "Unknown Category"; // Default value
+                    if (isset($_SESSION['catid'])) {
+                        $catid = $_SESSION['catid'];
+                        $catQuery = mysqli_query($con, "SELECT CategoryName FROM tblcategory WHERE id = '$catid'");
+                        if ($catQuery && mysqli_num_rows($catQuery) > 0) {
+                            $catRow = mysqli_fetch_array($catQuery);
+                            $categoryName = $catRow['CategoryName'];
+                        } else {
+                            // Handle case where catid in session does not exist in database
+                            // You might want to unset $_SESSION['catid'] or redirect
+                            $categoryName = "Category Not Found";
+                        }
+                    }
                     ?>
                     <div class="category-header" data-aos="fade-up">
                         <h1 class="category-title"><?php echo htmlentities($categoryName); ?> News</h1>
@@ -423,24 +441,33 @@ if($_GET['catid']!=''){
                     $no_of_records_per_page = 6;
                     $offset = ($pageno-1) * $no_of_records_per_page;
                     
-                    $total_pages_sql = "SELECT COUNT(*) FROM tblposts WHERE CategoryId='$catid' AND Is_Active=1";
-                    $result = mysqli_query($con, $total_pages_sql);
-                    $total_rows = mysqli_fetch_array($result)[0];
-                    $total_pages = ceil($total_rows / $no_of_records_per_page);
+                    $total_pages = 0; // Initialize total_pages
+                    $rowcount = 0; // Initialize rowcount
                     
-                    $query = mysqli_query($con, "SELECT tblposts.id as pid, tblposts.PostTitle as posttitle, 
-                                                tblposts.PostImage, tblcategory.CategoryName as category, 
-                                                tblcategory.id as cid, tblsubcategory.Subcategory as subcategory, 
-                                                tblposts.PostingDate as postingdate
-                                                FROM tblposts 
-                                                LEFT JOIN tblcategory ON tblcategory.id = tblposts.CategoryId 
-                                                LEFT JOIN tblsubcategory ON tblsubcategory.SubCategoryId = tblposts.SubCategoryId 
-                                                WHERE tblposts.CategoryId = '$catid' 
-                                                AND tblposts.Is_Active = 1 
-                                                ORDER BY tblposts.id DESC  
-                                                LIMIT $offset, $no_of_records_per_page");
-                    
-                    $rowcount = mysqli_num_rows($query);
+                    if (isset($_SESSION['catid'])) {
+                        $catid = $_SESSION['catid'];
+                        $total_pages_sql = "SELECT COUNT(*) FROM tblposts WHERE CategoryId='$catid' AND Is_Active=1";
+                        $result = mysqli_query($con, $total_pages_sql);
+                        if ($result) {
+                            $total_rows = mysqli_fetch_array($result)[0];
+                            $total_pages = ceil($total_rows / $no_of_records_per_page);
+                        }
+                        
+                        $query = mysqli_query($con, "SELECT tblposts.id as pid, tblposts.PostTitle as posttitle, 
+                                                    tblposts.PostImage, tblcategory.CategoryName as category, 
+                                                    tblcategory.id as cid, tblsubcategory.Subcategory as subcategory, 
+                                                    tblposts.PostingDate as postingdate
+                                                    FROM tblposts 
+                                                    LEFT JOIN tblcategory ON tblcategory.id = tblposts.CategoryId 
+                                                    LEFT JOIN tblsubcategory ON tblsubcategory.SubCategoryId = tblposts.SubCategoryId 
+                                                    WHERE tblposts.CategoryId = '$catid' 
+                                                    AND tblposts.Is_Active = 1 
+                                                    ORDER BY tblposts.id DESC  
+                                                    LIMIT $offset, $no_of_records_per_page");
+                        
+                        $rowcount = mysqli_num_rows($query);
+                    }
+
                     if($rowcount == 0) {
                         echo '<div class="alert alert-info text-center">No news found in this category.</div>';
                     } else {

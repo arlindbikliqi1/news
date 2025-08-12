@@ -13,7 +13,7 @@ include('includes/config.php');
     <meta name="description" content="Search results for news articles">
     <meta name="author" content="News Portal">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <title>NewsPortal | Search Results</title>
+    <title>TopCentral.news | Search Results</title>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">

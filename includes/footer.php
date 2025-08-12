@@ -49,7 +49,7 @@
                     <div class="footer-brand">
                         <a href="index.php" class="footer-logo">
                             <i class="fas fa-newspaper"></i>
-                            <span class="logo-text">NewsPortal</span>
+                            <span class="logo-text">TopCentral.news</span>
                         </a>
                         <p class="footer-description">
                             Your trusted source for breaking news, in-depth analysis, and compelling stories from around the world. We deliver truth, transparency, and timely reporting.
@@ -79,9 +79,6 @@
                             <li><a href="index.php"><i class="fas fa-home me-2"></i>Home</a></li>
                             <li><a href="about-us.php"><i class="fas fa-info-circle me-2"></i>About Us</a></li>
                             <li><a href="contact-us.php"><i class="fas fa-envelope me-2"></i>Contact</a></li>
-                            <li><a href="archive.php"><i class="fas fa-archive me-2"></i>Archive</a></li>
-                            <li><a href="team.php"><i class="fas fa-users me-2"></i>Our Team</a></li>
-                            <li><a href="careers.php"><i class="fas fa-briefcase me-2"></i>Careers</a></li>
                         </ul>
                     </div>
                 </div>
@@ -111,10 +108,9 @@
                     <div class="footer-section">
                         <h5 class="footer-section-title">Resources</h5>
                         <ul class="footer-links">
-                            <li><a href="privacy-policy.php"><i class="fas fa-shield-alt me-2"></i>Privacy Policy</a></li>
-                            <li><a href="terms-of-service.php"><i class="fas fa-file-contract me-2"></i>Terms of Service</a></li>
+                            <li><a href="privacy.php"><i class="fas fa-shield-alt me-2"></i>Privacy Policy</a></li>
+                            <li><a href="terms.php"><i class="fas fa-file-contract me-2"></i>Terms of Service</a></li>
                             <li><a href="advertise.php"><i class="fas fa-bullhorn me-2"></i>Advertise</a></li>
-                            <li><a href="admin/index.php"><i class="fas fa-bullhorn me-2"></i>Panel</a></li>
                         </ul>
                     </div>
                 </div>
@@ -166,7 +162,7 @@
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="footer-bottom-content">
                         <p class="copyright">
-                            © <?php echo date('Y'); ?> NewsPortal. All rights reserved. 
+                            © <?php echo date('Y'); ?> TopCentral.news. All rights reserved. 
                             <span class="separator">|</span>
                             Made with <i class="fas fa-heart text-danger"></i> for better journalism.
                         </p>

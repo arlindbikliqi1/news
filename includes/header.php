@@ -2,7 +2,6 @@
 // Include configuration file
 include('includes/config.php');
 
-// Function to fetch breaking news
 function getBreakingNews($con) {
     $breakingNews = [];
     if (isset($con) && $con) {
@@ -43,7 +42,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NewsPortal</title>
+    <title>TopCentral.news</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -509,7 +508,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                             <?php endforeach; ?>
                         <?php else: ?>
                             <span class="ticker-item active">
-                                <a href="#">Welcome to NewsPortal - Stay updated with latest news!</a>
+                                <a href="#">Welcome to TopCentral.news - Stay updated with latest news!</a>
                             </span>
                         <?php endif; ?>
                     </div>
@@ -528,7 +527,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <a class="navbar-brand d-flex align-items-center" href="index.php">
                 <i class="fas fa-newspaper me-2" style="font-size: 2rem;"></i>
                 <div>
-                    <div style="font-size: 1.8rem; font-weight: 900;">NewsPortal</div>
+                    <div style="font-size: 1.8rem; font-weight: 900;">TopCentral.news</div>
                     <div style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8;">Breaking News & Updates</div>
                 </div>
             </a>
@@ -583,7 +582,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                                 </li>
                             <?php endif; ?>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="categories.php"><i class="fas fa-list me-2"></i>View All Categories</a></li>
+                            <li><a class="dropdown-item" href="category.php"><i class="fas fa-list me-2"></i>View All Categories</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

@@ -15,7 +15,7 @@ while($row=mysqli_fetch_array($query)) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Live News Portal | Contact Us</title>
+    <title>TopCentral.news | Contact Us</title>
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     
     <!-- Fonts -->

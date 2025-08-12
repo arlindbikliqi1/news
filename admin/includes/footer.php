@@ -1,6 +1,5 @@
-<footer class="foot text-center" style=" position: sticky;
-  top: 0;">
-    <?php echo date('Y');?>
+<footer class="foot text-center" style="position: relative; bottom: 0; width: 100%; padding: 15px 0; background-color: #f8f9fa; border-top: 1px solid #e9ecef; color: #6c757d;">
+    &copy; <?php echo date('Y');?> NewsPortal. All rights reserved.
 </footer>
 </div>
 </div>
@@ -40,7 +39,8 @@ $(document).ready(function() {
             'excelHtml5',
             'csvHtml5',
             'pdfHtml5'
-        ]
+        ],
+        responsive: true // Enable DataTables responsiveness
     });
 });
 $(document).ready(function() {
@@ -51,7 +51,8 @@ $(document).ready(function() {
             'excelHtml5',
             'csvHtml5',
             'pdfHtml5'
-        ]
+        ],
+        responsive: true // Enable DataTables responsiveness
     });
 });
 </script>
@@ -87,6 +88,7 @@ function googleTranslateElementInit() {
 </script>
 
 <style>
+/* Google Translate specific styles */
 .goog-logo-link {
     display: none !important;
 }
@@ -100,13 +102,22 @@ function googleTranslateElementInit() {
     padding: 8px;
     color: #000;
     background: #eeee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
-#google_translate_element {
-    padding-top: 13px;
-    position: absolute;
-    top: 7px;
-    right: 100px;
+/* Adjust position for smaller screens if needed, though it's now floated right */
+@media (max-width: 767px) {
+    #google_translate_element {
+        position: relative; /* Change from absolute to relative */
+        top: auto;
+        right: auto;
+        float: none; /* Remove float */
+        text-align: center; /* Center the element */
+        margin: 10px auto; /* Add margin for spacing */
+        width: fit-content; /* Adjust width to content */
+    }
 }
 </style>
 
