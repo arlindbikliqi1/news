@@ -64,6 +64,10 @@ if ($result->num_rows > 0) {
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
+    <!-- Adsterra Scripts -->
+    <script type='text/javascript' src='//pl27432355.profitableratecpm.com/cc/d2/ab/ccd2ab98de64c642a22b991d50b07112.js'></script>
+    <script type='text/javascript' src='//pl27432873.profitableratecpm.com/b0/c9/22/b0c92206ec7bc13315cd757b3faa6ebf.js'></script>
+    
     <style>
         :root {
             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -384,6 +388,63 @@ if ($result->num_rows > 0) {
             box-shadow: var(--shadow-md);
         }
 
+        /* Ad Styles */
+        .ad-container {
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            padding: 1rem;
+            margin: 2rem 0;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .ad-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .direct-link-banner {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: block;
+        }
+
+        .direct-link-banner:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            color: white;
+        }
+
+        .direct-link-banner h4 {
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .direct-link-banner p {
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        .in-content-ad {
+            background: var(--bg-gray);
+            border-radius: var(--border-radius-sm);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+            border-left: 4px solid var(--primary-color);
+        }
+
         /* Responsive Design */
         @media (max-width: 992px) {
             .article-title {
@@ -424,32 +485,98 @@ if ($result->num_rows > 0) {
                 height: 250px;
             }
         }
+
         /* Add this to your existing CSS */
-@media (min-width: 992px) {
-    .sidebar-widgets .row > div {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
+        @media (min-width: 992px) {
+            .sidebar-widgets .row > div {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
 
-@media (max-width: 991px) {
-    .sidebar-widgets .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .sidebar-widgets .row > div {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-}
+        @media (max-width: 991px) {
+            .sidebar-widgets .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            .sidebar-widgets .row > div {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
 
-@media (max-width: 767px) {
-    .sidebar-widgets .row > div {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
+        @media (max-width: 767px) {
+            .sidebar-widgets .row > div {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        .loading.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
     </style>
 </head>
 
@@ -461,6 +588,31 @@ if ($result->num_rows > 0) {
 
     <!-- Header -->
     <?php include('includes/header.php');?>
+
+    <!-- Top Banner Ad - First View -->
+    <div class="container" style="padding-top: 120px;">
+        <div class="row">
+            <div class="col-12">
+                <div class="ad-container">
+                    <div class="ad-label">Advertisement</div>
+                    <script type="text/javascript"> atOptions = { 'key' : '60a75c7cae1585cddedfdb4dc793e756', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> 
+                    <script type="text/javascript" src="//www.highperformanceformat.com/60a75c7cae1585cddedfdb4dc793e756/invoke.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Direct Link Banner - First View -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
+                    <h4><i class="fas fa-newspaper me-2"></i>📰 Breaking: Exclusive Content!</h4>
+                    <p>Get access to premium news content and exclusive stories - Don't miss out!</p>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- News Details Section -->
     <section class="news-details-section">
@@ -522,11 +674,58 @@ if ($result->num_rows > 0) {
                         
                         <img src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>" class="article-image">
                         
+                        <!-- In-Content Ad -->
+                        <div class="in-content-ad">
+                            <div class="ad-label">Advertisement</div>
+                            <script type="text/javascript"> atOptions = { 'key' : '521e77e0c57d2c5a0e07ddb91c825ebb', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} }; </script> 
+                            <script type="text/javascript" src="//www.highperformanceformat.com/521e77e0c57d2c5a0e07ddb91c825ebb/invoke.js"></script>
+                        </div>
+
                         <div class="article-content">
                             <?php 
-                            $pt = $row['postdetails'];
-                            echo (substr($pt, 0));
+                            $content = $row['postdetails'];
+                            $paragraphs = explode('</p>', $content);
+                            $paragraphCount = 0;
+                            
+                            foreach($paragraphs as $paragraph) {
+                                if(!empty(trim($paragraph))) {
+                                    echo $paragraph . '</p>';
+                                    $paragraphCount++;
+                                    
+                                    // Add direct link banner after 3rd paragraph
+                                    if($paragraphCount == 3) {
+                                        echo '<a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
+                                                <h4><i class="fas fa-star me-2"></i>🌟 Trending Now!</h4>
+                                                <p>Join millions who discovered something amazing - Click to see what everyone is talking about!</p>
+                                              </a>';
+                                    }
+                                    
+                                    // Add ad after 5th paragraph
+                                    if($paragraphCount == 5) {
+                                        echo '<div class="in-content-ad">
+                                                <div class="ad-label">Advertisement</div>
+                                                <script type="text/javascript"> atOptions = { \'key\' : \'cdf5eddb171fa0a9e01790ff8a001f23\', \'format\' : \'iframe\', \'height\' : 250, \'width\' : 300, \'params\' : {} }; </script> 
+                                                <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
+                                              </div>';
+                                    }
+
+                                    // Add another direct link after 7th paragraph
+                                    if($paragraphCount == 7) {
+                                        echo '<a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
+                                                <h4><i class="fas fa-fire me-2"></i>🔥 Hot Deal Alert!</h4>
+                                                <p>Limited time offer - Don\'t let this opportunity slip away! Click now!</p>
+                                              </a>';
+                                    }
+                                }
+                            }
                             ?>
+                        </div>
+                        
+                        <!-- Native Ad Container -->
+                        <div class="ad-container">
+                            <div class="ad-label">Sponsored Content</div>
+                            <script async="async" data-cfasync="false" src="//pl27432810.profitableratecpm.com/b2858f41c51f5ba6eabcf9f57fc86305/invoke.js"></script> 
+                            <div id="container-b2858f41c51f5ba6eabcf9f57fc86305"></div>
                         </div>
                         
                         <div class="article-visits">
@@ -536,18 +735,11 @@ if ($result->num_rows > 0) {
                         <?php } ?>
                     </div>
 
-                    <!-- Ad Unit: 468x60 Iframe Ad -->
-                    <div class="text-center my-4">
-                        <script type="text/javascript">
-                            atOptions = {
-                                'key' : '521e77e0c57d2c5a0e07ddb91c825ebb',
-                                'format' : 'iframe',
-                                'height' : 60,
-                                'width' : 468,
-                                'params' : {}
-                            };
-                        </script>
-                        <script type="text/javascript" src="//www.highperformanceformat.com/521e77e0c57d2c5a0e07ddb91c825ebb/invoke.js"></script>
+                    <!-- Ad Between Article and Comments -->
+                    <div class="ad-container">
+                        <div class="ad-label">Advertisement</div>
+                        <script type="text/javascript"> atOptions = { 'key' : '60a75c7cae1585cddedfdb4dc793e756', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> 
+                        <script type="text/javascript" src="//www.highperformanceformat.com/60a75c7cae1585cddedfdb4dc793e756/invoke.js"></script>
                     </div>
                     
                     <!-- Comments Section -->
@@ -558,7 +750,9 @@ if ($result->num_rows > 0) {
                         $sts = 1;
                         $query = mysqli_query($con, "select name,comment,postingDate from tblcomments where postId='$pid' and status='$sts'");
                         if(mysqli_num_rows($query) > 0) {
+                            $commentCount = 0;
                             while ($row = mysqli_fetch_array($query)) {
+                                $commentCount++;
                         ?>
                         <div class="comment">
                             <div class="comment-avatar">
@@ -574,11 +768,25 @@ if ($result->num_rows > 0) {
                             </div>
                         </div>
                         <?php 
+                            // Add direct link banner after every 3 comments
+                            if ($commentCount % 3 == 0) {
+                                echo '<a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
+                                        <h4><i class="fas fa-gift me-2"></i>🎁 Special Bonus!</h4>
+                                        <p>Exclusive content waiting for you - Click to unlock!</p>
+                                      </a>';
+                            }
                             }
                         } else {
                             echo '<p class="text-center py-4">No comments yet. Be the first to comment!</p>';
                         }
                         ?>
+                    </div>
+
+                    <!-- Ad Before Comment Form -->
+                    <div class="ad-container">
+                        <div class="ad-label">Advertisement</div>
+                        <script type="text/javascript"> atOptions = { 'key' : 'cdf5eddb171fa0a9e01790ff8a001f23', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> 
+                        <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
                     </div>
                     
                     <!-- Comment Form -->
@@ -611,55 +819,71 @@ if ($result->num_rows > 0) {
                 
                 <!-- Sidebar -->
                 <div class="col-lg-4">
-                    <?php include('includes/sidebar.php');?>
-
-                    <!-- Ad Unit: 160x600 Iframe Ad -->
-                    <div class="sidebar-ad my-4 text-center">
-                        <script type="text/javascript">
-                            atOptions = {
-                                'key' : '473dbe0ba5e948b989fe71879b4a9faa',
-                                'format' : 'iframe',
-                                'height' : 600,
-                                'width' : 160,
-                                'params' : {}
-                            };
-                        </script>
-                        <script type="text/javascript" src="//www.highperformanceformat.com/473dbe0ba5e948b989fe71879b4a9faa/invoke.js"></script>
-                    </div>
-
-                    <!-- Ad Unit: 300x250 Iframe Ad -->
-                    <div class="sidebar-ad my-4 text-center">
-                        <script type="text/javascript">
-                            atOptions = {
-                                'key' : 'cdf5eddb171fa0a9e01790ff8a001f23',
-                                'format' : 'iframe',
-                                'height' : 250,
-                                'width' : 300,
-                                'params' : {}
-                            };
-                        </script>
+                    <!-- Sidebar Ad -->
+                    <div class="ad-container">
+                        <div class="ad-label">Advertisement</div>
+                        <script type="text/javascript"> atOptions = { 'key' : 'cdf5eddb171fa0a9e01790ff8a001f23', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> 
                         <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
                     </div>
 
-                    <!-- Ad Unit: Native Banner Ad (Async) -->
-                    <div class="sidebar-ad my-4">
-                        <script async="async" data-cfasync="false" src="//pl27432810.profitableratecpm.com/b2858f41c51f5ba6eabcf9f57fc86305/invoke.js"></script>
-                        <div id="container-b2858f41c51f5ba6eabcf9f57fc86305"></div>
+                    <!-- Direct Link Banner in Sidebar -->
+                    <a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
+                        <h4><i class="fas fa-lightning-bolt me-2"></i>⚡ Quick Access!</h4>
+                        <p>Fast track to exclusive content - One click away!</p>
+                    </a>
+
+                    <!-- Sidebar Skyscraper Ad -->
+                    <div class="ad-container">
+                        <div class="ad-label">Advertisement</div>
+                        <script type="text/javascript"> atOptions = { 'key' : '473dbe0ba5e948b989fe71879b4a9faa', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} }; </script> 
+                        <script type="text/javascript" src="//www.highperformanceformat.com/473dbe0ba5e948b989fe71879b4a9faa/invoke.js"></script>
                     </div>
 
+                    <?php include('includes/sidebar.php');?>
+
+                    <!-- Another Sidebar Ad -->
+                    <div class="ad-container">
+                        <div class="ad-label">Advertisement</div>
+                        <script type="text/javascript"> atOptions = { 'key' : 'cdf5eddb171fa0a9e01790ff8a001f23', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> 
+                        <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Bottom Banner Ad -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="ad-container">
+                    <div class="ad-label">Advertisement</div>
+                    <script type="text/javascript"> atOptions = { 'key' : '60a75c7cae1585cddedfdb4dc793e756', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> 
+                    <script type="text/javascript" src="//www.highperformanceformat.com/60a75c7cae1585cddedfdb4dc793e756/invoke.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Direct Link Banner -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
+                    <h4><i class="fas fa-rocket me-2"></i>🚀 Last Chance!</h4>
+                    <p>Don't miss this incredible opportunity - Click before it's gone!</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <?php include('includes/footer.php');?>
 
-    <!-- Ad Unit: Popunder (JS SYNC) -->
-    <script type='text/javascript' src='//pl27432355.profitableratecpm.com/cc/d2/ab/ccd2ab98de64c642a22b991d50b07112.js'></script>
-
-    <!-- Ad Unit: SocialBar (JS SYNC) -->
-    <script type='text/javascript' src='//pl27432873.profitableratecpm.com/b0/c9/22/b0c92206ec7bc13315cd757b3faa6ebf.js'></script>
+    <!-- Scroll to top button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -705,6 +929,17 @@ if ($result->num_rows > 0) {
                     scrollTop: target.offset().top - 100
                 }, 1000);
             }
+        });
+
+        // Direct link banner click tracking
+        $('.direct-link-banner').on('click', function() {
+            // Add click tracking if needed
+            console.log('Direct link clicked from news details');
+        });
+
+        // Enhanced reading experience
+        $('.article-content').on('scroll', function() {
+            // Add reading progress tracking if needed
         });
     });
     </script>
