@@ -29,10 +29,6 @@ include('includes/config.php');
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <!-- Adsterra Scripts -->
-    <script type='text/javascript' src='//pl27432355.profitableratecpm.com/cc/d2/ab/ccd2ab98de64c642a22b991d50b07112.js'></script>
-    <script type='text/javascript' src='//pl27432873.profitableratecpm.com/b0/c9/22/b0c92206ec7bc13315cd757b3faa6ebf.js'></script>
-    
     <style>
         :root {
             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -94,6 +90,167 @@ include('includes/config.php');
 
         ::-webkit-scrollbar-thumb:hover {
             background: var(--secondary-gradient);
+        }
+
+        /* Ad Styles */
+        .ad-container {
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .ad-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent-gradient);
+        }
+
+        .ad-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .premium-ad-container {
+            background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
+            border: 2px solid var(--primary-color);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .premium-ad-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+        }
+
+        .premium-ad-label {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .sidebar-ad {
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .floating-ad {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-xl);
+            padding: 1rem;
+            z-index: 999;
+            max-width: 300px;
+            border: 2px solid var(--accent-color);
+        }
+
+        .floating-ad-close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .direct-link-container {
+            background: var(--accent-gradient);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .direct-link-container:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .direct-link-container:before {
+            content: '🎯';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+
+        .direct-link-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .direct-link-subtitle {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .interstitial-trigger {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin: 1rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .interstitial-trigger:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            color: white;
         }
 
         /* Header Styles */
@@ -496,54 +653,6 @@ include('includes/config.php');
             color: white;
         }
 
-        /* Ad Styles */
-        .ad-container {
-            background: var(--bg-light);
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-sm);
-            padding: 1rem;
-            margin: 2rem 0;
-            text-align: center;
-            border: 1px solid var(--border-color);
-        }
-
-        .ad-label {
-            font-size: 0.75rem;
-            color: var(--text-light);
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .direct-link-banner {
-            background: var(--primary-gradient);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: var(--border-radius);
-            margin: 2rem 0;
-            text-align: center;
-            cursor: pointer;
-            transition: var(--transition);
-            text-decoration: none;
-            display: block;
-        }
-
-        .direct-link-banner:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-            color: white;
-        }
-
-        .direct-link-banner h4 {
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        .direct-link-banner p {
-            margin: 0;
-            opacity: 0.9;
-        }
-
         /* Pagination */
         .pagination {
             justify-content: center;
@@ -578,6 +687,10 @@ include('includes/config.php');
         @media (max-width: 1200px) {
             .carousel-title {
                 font-size: 2rem;
+            }
+            
+            .floating-ad {
+                display: none;
             }
         }
 
@@ -624,6 +737,15 @@ include('includes/config.php');
             .search-box {
                 max-width: 100%;
                 margin-top: 1rem;
+            }
+            
+            .floating-ad {
+                display: none;
+            }
+            
+            .ad-container {
+                margin: 1rem 0;
+                padding: 1rem;
             }
         }
 
@@ -721,6 +843,56 @@ include('includes/config.php');
             box-shadow: var(--shadow-lg);
         }
     </style>
+
+    <!-- Ad Scripts -->
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'cdf5eddb171fa0a9e01790ff8a001f23',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
+
+    <script type="text/javascript">
+        atOptions = {
+            'key' : '60a75c7cae1585cddedfdb4dc793e756',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/60a75c7cae1585cddedfdb4dc793e756/invoke.js"></script>
+
+    <script type="text/javascript">
+        atOptions = {
+            'key' : '473dbe0ba5e948b989fe71879b4a9faa',
+            'format' : 'iframe',
+            'height' : 600,
+            'width' : 160,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/473dbe0ba5e948b989fe71879b4a9faa/invoke.js"></script>
+
+    <script type="text/javascript">
+        atOptions = {
+            'key' : '521e77e0c57d2c5a0e07ddb91c825ebb',
+            'format' : 'iframe',
+            'height' : 60,
+            'width' : 468,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/521e77e0c57d2c5a0e07ddb91c825ebb/invoke.js"></script>
+
+    <script type='text/javascript' src='//pl27432355.profitableratecpm.com/cc/d2/ab/ccd2ab98de64c642a22b991d50b07112.js'></script>
+    <script type='text/javascript' src='//pl27432873.profitableratecpm.com/b0/c9/22/b0c92206ec7bc13315cd757b3faa6ebf.js'></script>
+
+    <script async="async" data-cfasync="false" src="//pl27432810.profitableratecpm.com/b2858f41c51f5ba6eabcf9f57fc86305/invoke.js"></script>
 </head>
 
 <body>
@@ -731,29 +903,20 @@ include('includes/config.php');
 
     <!-- Header -->
     <?php include('includes/header.php');?>
-    
-    <!-- Top Banner Ad - First View -->
-    <div class="container" style="margin-top: 120px;">
-        <div class="row">
-            <div class="col-12">
-                <div class="ad-container">
-                    <div class="ad-label">Advertisement</div>
-                    <script type="text/javascript"> atOptions = { 'key' : '60a75c7cae1585cddedfdb4dc793e756', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> 
-                    <script type="text/javascript" src="//www.highperformanceformat.com/60a75c7cae1585cddedfdb4dc793e756/invoke.js"></script>
-                </div>
-            </div>
+
+    <!-- Top Banner Ad -->
+    <div class="container-fluid">
+        <div class="premium-ad-container" data-aos="fade-down">
+            <div class="premium-ad-label">Premium Content</div>
+            <div id="container-b2858f41c51f5ba6eabcf9f57fc86305"></div>
         </div>
     </div>
 
-    <!-- Direct Link Banner - First View -->
+    <!-- Direct Link CTA -->
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
-                    <h4><i class="fas fa-gift me-2"></i>🎉 Special Offer - Limited Time!</h4>
-                    <p>Click here for exclusive deals and amazing offers you don't want to miss!</p>
-                </a>
-            </div>
+        <div class="direct-link-container" data-aos="zoom-in" onclick="window.open('https://otieu.com/4/9726604', '_blank')">
+            <div class="direct-link-title">🎯 Discover Amazing Offers</div>
+            <div class="direct-link-subtitle">Click here to explore exclusive deals and content</div>
         </div>
     </div>
     
@@ -781,18 +944,24 @@ include('includes/config.php');
                         </div>
 
                         <!-- Sidebar Ad -->
-                        <div class="ad-container">
+                        <div class="sidebar-ad" data-aos="fade-right" data-aos-delay="200">
                             <div class="ad-label">Advertisement</div>
-                            <script type="text/javascript"> atOptions = { 'key' : 'cdf5eddb171fa0a9e01790ff8a001f23', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> 
-                            <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
+                            <script type="text/javascript">
+                                atOptions = {
+                                    'key' : 'cdf5eddb171fa0a9e01790ff8a001f23',
+                                    'format' : 'iframe',
+                                    'height' : 250,
+                                    'width' : 300,
+                                    'params' : {}
+                                };
+                                document.write('<scr' + 'ipt type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></scr' + 'ipt>');
+                            </script>
                         </div>
 
-                        <!-- Sidebar Skyscraper Ad -->
-                        <div class="ad-container">
-                            <div class="ad-label">Advertisement</div>
-                            <script type="text/javascript"> atOptions = { 'key' : '473dbe0ba5e948b989fe71879b4a9faa', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} }; </script> 
-                            <script type="text/javascript" src="//www.highperformanceformat.com/473dbe0ba5e948b989fe71879b4a9faa/invoke.js"></script>
-                        </div>
+                        <!-- Direct Link Button -->
+                        <a href="https://otieu.com/4/9724733" target="_blank" class="interstitial-trigger" style="width: 100%; text-align: center; margin: 0;">
+                            <i class="fas fa-gift me-2"></i>Special Offers
+                        </a>
                     </div>
                 </div>
 
@@ -856,11 +1025,19 @@ include('includes/config.php');
                         </div>
                     </div>
 
-                    <!-- Ad Below Slider -->
-                    <div class="ad-container">
-                        <div class="ad-label">Advertisement</div>
-                        <script type="text/javascript"> atOptions = { 'key' : '521e77e0c57d2c5a0e07ddb91c825ebb', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} }; </script> 
-                        <script type="text/javascript" src="//www.highperformanceformat.com/521e77e0c57d2c5a0e07ddb91c825ebb/invoke.js"></script>
+                    <!-- Horizontal Banner Ad -->
+                    <div class="ad-container" data-aos="fade-up">
+                        <div class="ad-label">Sponsored Content</div>
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key' : '60a75c7cae1585cddedfdb4dc793e756',
+                                'format' : 'iframe',
+                                'height' : 90,
+                                'width' : 728,
+                                'params' : {}
+                            };
+                            document.write('<scr' + 'ipt type="text/javascript" src="//www.highperformanceformat.com/60a75c7cae1585cddedfdb4dc793e756/invoke.js"></scr' + 'ipt>');
+                        </script>
                     </div>
                 </div>
             </div>
@@ -902,9 +1079,9 @@ include('includes/config.php');
                                             LIMIT $offset, $no_of_records_per_page");
                 
                 $delay = 0;
-                $counter = 0;
+                $cardCount = 0;
                 while ($row = mysqli_fetch_array($query)) {
-                    $counter++;
+                    $cardCount++;
                 ?>
                 <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="<?php echo $delay; ?>">
                     <article class="news-card">
@@ -943,63 +1120,37 @@ include('includes/config.php');
                         </div>
                     </article>
                 </div>
+
                 <?php 
-                // Add ads after every 4 news cards
-                if ($counter % 4 == 0 && $counter < 8) {
+                // Insert ads every 4 cards
+                if ($cardCount % 4 == 0 && $cardCount < 8) {
                 ?>
-                <div class="col-12 mb-4">
+                <div class="col-12 mb-4" data-aos="fade-up">
                     <div class="ad-container">
                         <div class="ad-label">Advertisement</div>
-                        <script type="text/javascript"> atOptions = { 'key' : '60a75c7cae1585cddedfdb4dc793e756', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> 
-                        <script type="text/javascript" src="//www.highperformanceformat.com/60a75c7cae1585cddedfdb4dc793e756/invoke.js"></script>
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key' : '521e77e0c57d2c5a0e07ddb91c825ebb',
+                                'format' : 'iframe',
+                                'height' : 60,
+                                'width' : 468,
+                                'params' : {}
+                            };
+                            document.write('<scr' + 'ipt type="text/javascript" src="//www.highperformanceformat.com/521e77e0c57d2c5a0e07ddb91c825ebb/invoke.js"></scr' + 'ipt>');
+                        </script>
                     </div>
                 </div>
-                <?php
-                }
-                
-                // Add direct link banner after 6 news cards
-                if ($counter % 6 == 0) {
-                ?>
-                <div class="col-12 mb-4">
-                    <a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
-                        <h4><i class="fas fa-star me-2"></i>💎 Premium Content Unlocked!</h4>
-                        <p>Discover exclusive content and premium features - Click now!</p>
-                    </a>
-                </div>
-                <?php
-                }
-                
+                <?php } ?>
+
+                <?php 
                 $delay += 100;
                 } ?>
             </div>
 
-            <!-- Middle Ad Section -->
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <div class="ad-container">
-                        <div class="ad-label">Advertisement</div>
-                        <script type="text/javascript"> atOptions = { 'key' : 'cdf5eddb171fa0a9e01790ff8a001f23', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> 
-                        <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <div class="ad-container">
-                        <div class="ad-label">Advertisement</div>
-                        <script type="text/javascript"> atOptions = { 'key' : 'cdf5eddb171fa0a9e01790ff8a001f23', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> 
-                        <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Native Ad Container -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="ad-container">
-                        <div class="ad-label">Sponsored Content</div>
-                        <script async="async" data-cfasync="false" src="//pl27432810.profitableratecpm.com/b2858f41c51f5ba6eabcf9f57fc86305/invoke.js"></script> 
-                        <div id="container-b2858f41c51f5ba6eabcf9f57fc86305"></div>
-                    </div>
-                </div>
+            <!-- Mid-section Direct Link -->
+            <div class="direct-link-container" data-aos="zoom-in" onclick="window.open('https://otieu.com/4/9724733', '_blank')">
+                <div class="direct-link-title">💰 Exclusive Deals Await</div>
+                <div class="direct-link-subtitle">Don't miss out on limited-time offers and premium content</div>
             </div>
 
             <!-- Pagination -->
@@ -1041,18 +1192,25 @@ include('includes/config.php');
                 </ul>
             </nav>
             <?php } ?>
-
-            <!-- Bottom Direct Link Banner -->
-            <div class="row">
-                <div class="col-12">
-                    <a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
-                        <h4><i class="fas fa-rocket me-2"></i>🚀 Don't Miss Out!</h4>
-                        <p>Join thousands who discovered amazing opportunities - Click to explore!</p>
-                    </a>
-                </div>
-            </div>
         </div>
     </section>
+
+    <!-- Bottom Banner Ad -->
+    <div class="container">
+        <div class="ad-container" data-aos="fade-up">
+            <div class="ad-label">Sponsored</div>
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '473dbe0ba5e948b989fe71879b4a9faa',
+                    'format' : 'iframe',
+                    'height' : 600,
+                    'width' : 160,
+                    'params' : {}
+                };
+                document.write('<scr' + 'ipt type="text/javascript" src="//www.highperformanceformat.com/473dbe0ba5e948b989fe71879b4a9faa/invoke.js"></scr' + 'ipt>');
+            </script>
+        </div>
+    </div>
 
     <!-- Sidebar Widget Column -->
     <div class="container">
@@ -1063,15 +1221,14 @@ include('includes/config.php');
         </div>
     </div>
 
-    <!-- Bottom Banner Ad -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="ad-container">
-                    <div class="ad-label">Advertisement</div>
-                    <script type="text/javascript"> atOptions = { 'key' : '60a75c7cae1585cddedfdb4dc793e756', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> 
-                    <script type="text/javascript" src="//www.highperformanceformat.com/60a75c7cae1585cddedfdb4dc793e756/invoke.js"></script>
-                </div>
+    <!-- Floating Ad (Desktop only) -->
+    <div class="floating-ad" id="floatingAd" style="display: none;">
+        <button class="floating-ad-close" onclick="document.getElementById('floatingAd').style.display='none'">&times;</button>
+        <div class="ad-label">Special Offer</div>
+        <div style="cursor: pointer;" onclick="window.open('https://otieu.com/4/9726604', '_blank')">
+            <div style="padding: 20px; text-align: center; background: var(--accent-gradient); color: white; border-radius: 10px;">
+                <div style="font-weight: bold; margin-bottom: 10px;">🎁 Limited Time!</div>
+                <div style="font-size: 14px;">Click for Exclusive Access</div>
             </div>
         </div>
     </div>
@@ -1102,6 +1259,13 @@ include('includes/config.php');
         setTimeout(function() {
             $('#loading').addClass('hide');
         }, 1000);
+
+        // Show floating ad after 10 seconds (desktop only)
+        if (window.innerWidth > 992) {
+            setTimeout(function() {
+                $('#floatingAd').fadeIn();
+            }, 10000);
+        }
 
         // Navbar scroll effect
         $(window).scroll(function() {
@@ -1142,17 +1306,21 @@ include('includes/config.php');
             $(this).parent().removeClass('focused');
         });
 
-        // Lazy loading for images
-        $('img').each(function() {
-            $(this).on('load', function() {
-                $(this).addClass('loaded');
-            });
-        });
-
         // Auto-advance carousel
         $('.carousel').carousel({
             interval: 5000,
             wrap: true
+        });
+
+        // Add click tracking for direct links
+        $('.direct-link-container, .interstitial-trigger').on('click', function() {
+            // Track clicks if you have analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'click', {
+                    'event_category': 'advertisement',
+                    'event_label': 'direct_link_click'
+                });
+            }
         });
 
         // Smooth scrolling for anchor links
@@ -1166,10 +1334,23 @@ include('includes/config.php');
             }
         });
 
-        // Direct link banner click tracking
-        $('.direct-link-banner').on('click', function() {
-            // Add click tracking if needed
-            console.log('Direct link clicked');
+        // Lazy loading for ads
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Load ads when they come into view
+                    const adContainer = entry.target;
+                    if (!adContainer.classList.contains('loaded')) {
+                        adContainer.classList.add('loaded');
+                        // Trigger ad reload if needed
+                    }
+                }
+            });
+        });
+
+        // Observe all ad containers
+        document.querySelectorAll('.ad-container').forEach(ad => {
+            observer.observe(ad);
         });
     });
 
@@ -1182,6 +1363,21 @@ include('includes/config.php');
                 console.log('ServiceWorker registration failed');
             });
         });
+    }
+
+    // Ad interaction tracking
+    function trackAdClick(adType, url) {
+        // Track ad clicks for analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'ad_click', {
+                'event_category': 'advertisement',
+                'event_label': adType,
+                'value': 1
+            });
+        }
+        
+        // Open URL
+        window.open(url, '_blank');
     }
     </script>
 </body>
