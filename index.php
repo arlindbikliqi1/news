@@ -6,21 +6,10 @@ include('includes/config.php');
 <html lang="en">
 
 <head>
-    <!-- Ezoic Scripts -->
-    <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
-    <script>
-        window.ezstandalone = window.ezstandalone || {};
-        ezstandalone.cmd = ezstandalone.cmd || [];
-    </script>
-    
-    <!-- Consent Management -->
-    <script src="https://cmp.gatekeeperconsent.com/min.js" data-cfasync="false"></script>
-    <script src="https://the.gatekeeperconsent.com/cmp.min.js" data-cfasync="false"></script>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Stay informed with breaking news, latest updates, and in-depth analysis from around the world">
-    <meta name="author" content="TopCentral.news">
+    <meta name="author" content="News Portal">
     <link rel="shortcut icon" href="images/logo.webp" type="image/x-icon">
     <title>TopCentral.news - Breaking News & Latest Updates</title>
     
@@ -39,6 +28,10 @@ include('includes/config.php');
     
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Adsterra Scripts -->
+    <script type='text/javascript' src='//pl27432355.profitableratecpm.com/cc/d2/ab/ccd2ab98de64c642a22b991d50b07112.js'></script>
+    <script type='text/javascript' src='//pl27432873.profitableratecpm.com/b0/c9/22/b0c92206ec7bc13315cd757b3faa6ebf.js'></script>
     
     <style>
         :root {
@@ -83,23 +76,6 @@ include('includes/config.php');
             font-family: 'Inter', sans-serif;
             font-weight: 700;
             line-height: 1.2;
-        }
-
-        /* Ad Container Styles */
-        .ad-container {
-            margin: 20px 0;
-            text-align: center;
-            padding: 10px;
-        }
-        
-        .ad-container.sticky {
-            position: sticky;
-            top: 120px;
-            z-index: 100;
-        }
-        
-        .ad-container.sidebar {
-            margin: 15px 0;
         }
 
         /* Scrollbar Styling */
@@ -520,6 +496,54 @@ include('includes/config.php');
             color: white;
         }
 
+        /* Ad Styles */
+        .ad-container {
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            padding: 1rem;
+            margin: 2rem 0;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .ad-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .direct-link-banner {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: block;
+        }
+
+        .direct-link-banner:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            color: white;
+        }
+
+        .direct-link-banner h4 {
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .direct-link-banner p {
+            margin: 0;
+            opacity: 0.9;
+        }
+
         /* Pagination */
         .pagination {
             justify-content: center;
@@ -705,17 +729,32 @@ include('includes/config.php');
         <div class="spinner"></div>
     </div>
 
-    <!-- Top Banner Ad -->
-    <div class="ad-container">
-        <div id="ezoic-pub-ad-placeholder-101"></div>
-    </div>
-
     <!-- Header -->
     <?php include('includes/header.php');?>
     
-    <!-- Header Ad -->
-    <div class="ad-container">
-        <div id="ezoic-pub-ad-placeholder-102"></div>
+    <!-- Top Banner Ad - First View -->
+    <div class="container" style="margin-top: 120px;">
+        <div class="row">
+            <div class="col-12">
+                <div class="ad-container">
+                    <div class="ad-label">Advertisement</div>
+                    <script type="text/javascript"> atOptions = { 'key' : '60a75c7cae1585cddedfdb4dc793e756', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> 
+                    <script type="text/javascript" src="//www.highperformanceformat.com/60a75c7cae1585cddedfdb4dc793e756/invoke.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Direct Link Banner - First View -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
+                    <h4><i class="fas fa-gift me-2"></i>🎉 Special Offer - Limited Time!</h4>
+                    <p>Click here for exclusive deals and amazing offers you don't want to miss!</p>
+                </a>
+            </div>
+        </div>
     </div>
     
     <!-- Hero Section -->
@@ -725,11 +764,6 @@ include('includes/config.php');
                 <!-- Categories Sidebar -->
                 <div class="col-lg-3 col-md-4">
                     <div class="category-sidebar">
-                        <!-- Sidebar Ad -->
-                        <div class="ad-container sidebar">
-                            <div id="ezoic-pub-ad-placeholder-103"></div>
-                        </div>
-                        
                         <div class="category-card" data-aos="fade-right">
                             <h5 class="category-title">
                                 <i class="fas fa-list-ul me-2"></i>Categories
@@ -745,10 +779,19 @@ include('includes/config.php');
                                 <?php } ?>
                             </div>
                         </div>
-                        
-                        <!-- Sidebar Ad 2 -->
-                        <div class="ad-container sidebar">
-                            <div id="ezoic-pub-ad-placeholder-104"></div>
+
+                        <!-- Sidebar Ad -->
+                        <div class="ad-container">
+                            <div class="ad-label">Advertisement</div>
+                            <script type="text/javascript"> atOptions = { 'key' : 'cdf5eddb171fa0a9e01790ff8a001f23', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> 
+                            <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
+                        </div>
+
+                        <!-- Sidebar Skyscraper Ad -->
+                        <div class="ad-container">
+                            <div class="ad-label">Advertisement</div>
+                            <script type="text/javascript"> atOptions = { 'key' : '473dbe0ba5e948b989fe71879b4a9faa', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} }; </script> 
+                            <script type="text/javascript" src="//www.highperformanceformat.com/473dbe0ba5e948b989fe71879b4a9faa/invoke.js"></script>
                         </div>
                     </div>
                 </div>
@@ -812,15 +855,17 @@ include('includes/config.php');
                             </button>
                         </div>
                     </div>
+
+                    <!-- Ad Below Slider -->
+                    <div class="ad-container">
+                        <div class="ad-label">Advertisement</div>
+                        <script type="text/javascript"> atOptions = { 'key' : '521e77e0c57d2c5a0e07ddb91c825ebb', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} }; </script> 
+                        <script type="text/javascript" src="//www.highperformanceformat.com/521e77e0c57d2c5a0e07ddb91c825ebb/invoke.js"></script>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- In-Content Ad -->
-    <div class="ad-container">
-        <div id="ezoic-pub-ad-placeholder-105"></div>
-    </div>
 
     <!-- News Section -->
     <section class="news-section">
@@ -828,11 +873,6 @@ include('includes/config.php');
             <h2 class="section-title" data-aos="fade-up">
                 Latest <span style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">News</span>
             </h2>
-            
-            <!-- Mid-Section Ad -->
-            <div class="ad-container">
-                <div id="ezoic-pub-ad-placeholder-106"></div>
-            </div>
             
             <div class="row">
                 <?php 
@@ -862,9 +902,9 @@ include('includes/config.php');
                                             LIMIT $offset, $no_of_records_per_page");
                 
                 $delay = 0;
-                $cardCount = 0;
+                $counter = 0;
                 while ($row = mysqli_fetch_array($query)) {
-                    $cardCount++;
+                    $counter++;
                 ?>
                 <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="<?php echo $delay; ?>">
                     <article class="news-card">
@@ -904,17 +944,62 @@ include('includes/config.php');
                     </article>
                 </div>
                 <?php 
-                    // Insert ads after every 4 articles
-                    if ($cardCount % 4 == 0) {
-                        echo '<div class="col-12"><div class="ad-container"><div id="ezoic-pub-ad-placeholder-' . (107 + ($cardCount/4)) . '"></div></div></div>';
-                    }
-                    $delay += 100;
+                // Add ads after every 4 news cards
+                if ($counter % 4 == 0 && $counter < 8) {
+                ?>
+                <div class="col-12 mb-4">
+                    <div class="ad-container">
+                        <div class="ad-label">Advertisement</div>
+                        <script type="text/javascript"> atOptions = { 'key' : '60a75c7cae1585cddedfdb4dc793e756', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> 
+                        <script type="text/javascript" src="//www.highperformanceformat.com/60a75c7cae1585cddedfdb4dc793e756/invoke.js"></script>
+                    </div>
+                </div>
+                <?php
+                }
+                
+                // Add direct link banner after 6 news cards
+                if ($counter % 6 == 0) {
+                ?>
+                <div class="col-12 mb-4">
+                    <a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
+                        <h4><i class="fas fa-star me-2"></i>💎 Premium Content Unlocked!</h4>
+                        <p>Discover exclusive content and premium features - Click now!</p>
+                    </a>
+                </div>
+                <?php
+                }
+                
+                $delay += 100;
                 } ?>
             </div>
 
-            <!-- Pre-Pagination Ad -->
-            <div class="ad-container">
-                <div id="ezoic-pub-ad-placeholder-111"></div>
+            <!-- Middle Ad Section -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="ad-container">
+                        <div class="ad-label">Advertisement</div>
+                        <script type="text/javascript"> atOptions = { 'key' : 'cdf5eddb171fa0a9e01790ff8a001f23', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> 
+                        <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="ad-container">
+                        <div class="ad-label">Advertisement</div>
+                        <script type="text/javascript"> atOptions = { 'key' : 'cdf5eddb171fa0a9e01790ff8a001f23', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> 
+                        <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Native Ad Container -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="ad-container">
+                        <div class="ad-label">Sponsored Content</div>
+                        <script async="async" data-cfasync="false" src="//pl27432810.profitableratecpm.com/b2858f41c51f5ba6eabcf9f57fc86305/invoke.js"></script> 
+                        <div id="container-b2858f41c51f5ba6eabcf9f57fc86305"></div>
+                    </div>
+                </div>
             </div>
 
             <!-- Pagination -->
@@ -956,95 +1041,53 @@ include('includes/config.php');
                 </ul>
             </nav>
             <?php } ?>
+
+            <!-- Bottom Direct Link Banner -->
+            <div class="row">
+                <div class="col-12">
+                    <a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
+                        <h4><i class="fas fa-rocket me-2"></i>🚀 Don't Miss Out!</h4>
+                        <p>Join thousands who discovered amazing opportunities - Click to explore!</p>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
-
-    <!-- Bottom Content Ad -->
-    <div class="ad-container">
-        <div id="ezoic-pub-ad-placeholder-112"></div>
-    </div>
 
     <!-- Sidebar Widget Column -->
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <!-- Pre-Sidebar Ad -->
-                <div class="ad-container">
-                    <div id="ezoic-pub-ad-placeholder-113"></div>
-                </div>
-                
                 <?php include('includes/sidebar.php');?>
-                
-                <!-- Post-Sidebar Ad -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Banner Ad -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
                 <div class="ad-container">
-                    <div id="ezoic-pub-ad-placeholder-114"></div>
+                    <div class="ad-label">Advertisement</div>
+                    <script type="text/javascript"> atOptions = { 'key' : '60a75c7cae1585cddedfdb4dc793e756', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> 
+                    <script type="text/javascript" src="//www.highperformanceformat.com/60a75c7cae1585cddedfdb4dc793e756/invoke.js"></script>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Pre-Footer Ad -->
-    <div class="ad-container">
-        <div id="ezoic-pub-ad-placeholder-115"></div>
-    </div>
-
     <!-- Footer -->
     <?php include('includes/footer.php');?>
 
-    <!-- Scroll to Top Button -->
+    <!-- Scroll to top button -->
     <button class="scroll-top" id="scrollTop">
-        <i class="fas fa-arrow-up"></i>
+        <i class="fas fa-chevron-up"></i>
     </button>
-
-    <!-- Bottom Ad -->
-    <div class="ad-container">
-        <div id="ezoic-pub-ad-placeholder-116"></div>
-    </div>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- Ezoic Ad Scripts -->
-    <script>
-        // Initialize all ad placeholders on page load
-        ezstandalone.cmd.push(function () {
-            // Show header and top ads immediately
-            ezstandalone.showAds(101, 102);
-        });
-
-        // Load sidebar ads
-        ezstandalone.cmd.push(function () {
-            ezstandalone.showAds(103, 104);
-        });
-
-        // Load content ads
-        ezstandalone.cmd.push(function () {
-            ezstandalone.showAds(105, 106);
-        });
-
-        // Load article ads (dynamically created based on content)
-        ezstandalone.cmd.push(function () {
-            <?php
-            // Generate ad calls for article ads
-            $maxArticleAds = ceil($total_rows / 4);
-            for($i = 107; $i <= 107 + $maxArticleAds; $i++) {
-                echo "ezstandalone.showAds($i);";
-            }
-            ?>
-        });
-
-        // Load bottom section ads
-        ezstandalone.cmd.push(function () {
-            ezstandalone.showAds(111, 112, 113, 114, 115, 116);
-        });
-
-        // Show all ads fallback
-        ezstandalone.cmd.push(function () {
-            ezstandalone.showAds();
-        });
-    </script>
     
     <script>
     $(document).ready(function() {
@@ -1123,28 +1166,10 @@ include('includes/config.php');
             }
         });
 
-        // Ad refresh functionality for better revenue
-        setInterval(function() {
-            if (typeof ezstandalone !== 'undefined') {
-                // Refresh ads every 30 seconds for better impressions
-                ezstandalone.cmd.push(function () {
-                    ezstandalone.showAds();
-                });
-            }
-        }, 30000);
-
-        // Lazy load ads on scroll
-        $(window).scroll(function() {
-            $('.ad-container').each(function() {
-                var elementTop = $(this).offset().top;
-                var elementBottom = elementTop + $(this).outerHeight();
-                var viewportTop = $(window).scrollTop();
-                var viewportBottom = viewportTop + $(window).height();
-                
-                if (elementBottom > viewportTop && elementTop < viewportBottom) {
-                    $(this).addClass('in-viewport');
-                }
-            });
+        // Direct link banner click tracking
+        $('.direct-link-banner').on('click', function() {
+            // Add click tracking if needed
+            console.log('Direct link clicked');
         });
     });
 
@@ -1158,16 +1183,6 @@ include('includes/config.php');
             });
         });
     }
-
-    // Enhanced ad management for topcentral.news
-    window.addEventListener('load', function() {
-        // Ensure ads are loaded after page content
-        setTimeout(function() {
-            ezstandalone.cmd.push(function () {
-                ezstandalone.showAds();
-            });
-        }, 2000);
-    });
     </script>
 </body>
 </html>
