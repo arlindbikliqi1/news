@@ -64,10 +64,6 @@ if ($result->num_rows > 0) {
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <!-- Adsterra Scripts -->
-    <script type='text/javascript' src='//pl27432355.profitableratecpm.com/cc/d2/ab/ccd2ab98de64c642a22b991d50b07112.js'></script>
-    <script type='text/javascript' src='//pl27432873.profitableratecpm.com/b0/c9/22/b0c92206ec7bc13315cd757b3faa6ebf.js'></script>
-    
     <style>
         :root {
             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -129,6 +125,198 @@ if ($result->num_rows > 0) {
 
         ::-webkit-scrollbar-thumb:hover {
             background: var(--secondary-gradient);
+        }
+
+        /* Ad Styles */
+        .ad-container {
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .ad-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent-gradient);
+        }
+
+        .ad-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .premium-ad-container {
+            background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
+            border: 2px solid var(--primary-color);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .premium-ad-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+        }
+
+        .premium-ad-label {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .sidebar-ad {
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .floating-ad {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-xl);
+            padding: 1rem;
+            z-index: 999;
+            max-width: 300px;
+            border: 2px solid var(--accent-color);
+        }
+
+        .floating-ad-close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .direct-link-container {
+            background: var(--accent-gradient);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .direct-link-container:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .direct-link-container:before {
+            content: '🎯';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+
+        .direct-link-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .direct-link-subtitle {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .interstitial-trigger {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin: 1rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .interstitial-trigger:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            color: white;
+        }
+
+        .inline-ad {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+        }
+
+        .content-break-ad {
+            background: linear-gradient(135deg, #f093fb20 0%, #f5576c20 100%);
+            border: 2px dashed var(--accent-color);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .content-break-ad:before {
+            content: '📢';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 0 10px;
+            font-size: 1.5rem;
         }
 
         /* Header Styles */
@@ -221,6 +409,7 @@ if ($result->num_rows > 0) {
             background: var(--bg-gray);
             color: var(--text-dark);
             transition: var(--transition);
+            text-decoration: none;
         }
 
         .share-btn:hover {
@@ -388,63 +577,6 @@ if ($result->num_rows > 0) {
             box-shadow: var(--shadow-md);
         }
 
-        /* Ad Styles */
-        .ad-container {
-            background: var(--bg-light);
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-sm);
-            padding: 1rem;
-            margin: 2rem 0;
-            text-align: center;
-            border: 1px solid var(--border-color);
-        }
-
-        .ad-label {
-            font-size: 0.75rem;
-            color: var(--text-light);
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .direct-link-banner {
-            background: var(--primary-gradient);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: var(--border-radius);
-            margin: 2rem 0;
-            text-align: center;
-            cursor: pointer;
-            transition: var(--transition);
-            text-decoration: none;
-            display: block;
-        }
-
-        .direct-link-banner:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-            color: white;
-        }
-
-        .direct-link-banner h4 {
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        .direct-link-banner p {
-            margin: 0;
-            opacity: 0.9;
-        }
-
-        .in-content-ad {
-            background: var(--bg-gray);
-            border-radius: var(--border-radius-sm);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            text-align: center;
-            border-left: 4px solid var(--primary-color);
-        }
-
         /* Responsive Design */
         @media (max-width: 992px) {
             .article-title {
@@ -453,6 +585,10 @@ if ($result->num_rows > 0) {
             
             .article-image {
                 height: 400px;
+            }
+            
+            .floating-ad {
+                display: none;
             }
         }
 
@@ -473,6 +609,11 @@ if ($result->num_rows > 0) {
             
             .comment {
                 flex-direction: column;
+            }
+            
+            .ad-container {
+                margin: 1rem 0;
+                padding: 1rem;
             }
         }
 
@@ -512,72 +653,57 @@ if ($result->num_rows > 0) {
                 max-width: 100%;
             }
         }
-
-        /* Loading Animation */
-        .loading {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--bg-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            transition: opacity 0.5s, visibility 0.5s;
-        }
-
-        .loading.hide {
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 4px solid var(--border-color);
-            border-top: 4px solid var(--primary-color);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Scroll to top button */
-        .scroll-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 50px;
-            height: 50px;
-            background: var(--primary-gradient);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            z-index: 999;
-        }
-
-        .scroll-top.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .scroll-top:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-        }
     </style>
+
+    <!-- Ad Scripts -->
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'cdf5eddb171fa0a9e01790ff8a001f23',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
+
+    <script type="text/javascript">
+        atOptions = {
+            'key' : '60a75c7cae1585cddedfdb4dc793e756',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/60a75c7cae1585cddedfdb4dc793e756/invoke.js"></script>
+
+    <script type="text/javascript">
+        atOptions = {
+            'key' : '473dbe0ba5e948b989fe71879b4a9faa',
+            'format' : 'iframe',
+            'height' : 600,
+            'width' : 160,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/473dbe0ba5e948b989fe71879b4a9faa/invoke.js"></script>
+
+    <script type="text/javascript">
+        atOptions = {
+            'key' : '521e77e0c57d2c5a0e07ddb91c825ebb',
+            'format' : 'iframe',
+            'height' : 60,
+            'width' : 468,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/521e77e0c57d2c5a0e07ddb91c825ebb/invoke.js"></script>
+
+    <script type='text/javascript' src='//pl27432355.profitableratecpm.com/cc/d2/ab/ccd2ab98de64c642a22b991d50b07112.js'></script>
+    <script type='text/javascript' src='//pl27432873.profitableratecpm.com/b0/c9/22/b0c92206ec7bc13315cd757b3faa6ebf.js'></script>
+
+    <script async="async" data-cfasync="false" src="//pl27432810.profitableratecpm.com/b2858f41c51f5ba6eabcf9f57fc86305/invoke.js"></script>
 </head>
 
 <body>
@@ -589,28 +715,19 @@ if ($result->num_rows > 0) {
     <!-- Header -->
     <?php include('includes/header.php');?>
 
-    <!-- Top Banner Ad - First View -->
-    <div class="container" style="padding-top: 120px;">
-        <div class="row">
-            <div class="col-12">
-                <div class="ad-container">
-                    <div class="ad-label">Advertisement</div>
-                    <script type="text/javascript"> atOptions = { 'key' : '60a75c7cae1585cddedfdb4dc793e756', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> 
-                    <script type="text/javascript" src="//www.highperformanceformat.com/60a75c7cae1585cddedfdb4dc793e756/invoke.js"></script>
-                </div>
-            </div>
+    <!-- Top Banner Ad -->
+    <div class="container-fluid" style="margin-top: 100px;">
+        <div class="premium-ad-container" data-aos="fade-down">
+            <div class="premium-ad-label">Featured Sponsor</div>
+            <div id="container-b2858f41c51f5ba6eabcf9f57fc86305"></div>
         </div>
     </div>
 
-    <!-- Direct Link Banner - First View -->
+    <!-- Direct Link CTA -->
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
-                    <h4><i class="fas fa-newspaper me-2"></i>📰 Breaking: Exclusive Content!</h4>
-                    <p>Get access to premium news content and exclusive stories - Don't miss out!</p>
-                </a>
-            </div>
+        <div class="direct-link-container" data-aos="zoom-in" onclick="window.open('https://otieu.com/4/9726604', '_blank')">
+            <div class="direct-link-title">🔥 Breaking: Exclusive Content Available</div>
+            <div class="direct-link-subtitle">Click to access premium news and special offers</div>
         </div>
     </div>
 
@@ -674,58 +791,59 @@ if ($result->num_rows > 0) {
                         
                         <img src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>" class="article-image">
                         
-                        <!-- In-Content Ad -->
-                        <div class="in-content-ad">
+                        <!-- Ad after image -->
+                        <div class="inline-ad" data-aos="fade-up">
                             <div class="ad-label">Advertisement</div>
-                            <script type="text/javascript"> atOptions = { 'key' : '521e77e0c57d2c5a0e07ddb91c825ebb', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} }; </script> 
-                            <script type="text/javascript" src="//www.highperformanceformat.com/521e77e0c57d2c5a0e07ddb91c825ebb/invoke.js"></script>
+                            <script type="text/javascript">
+                                atOptions = {
+                                    'key' : '60a75c7cae1585cddedfdb4dc793e756',
+                                    'format' : 'iframe',
+                                    'height' : 90,
+                                    'width' : 728,
+                                    'params' : {}
+                                };
+                                document.write('<scr' + 'ipt type="text/javascript" src="//www.highperformanceformat.com/60a75c7cae1585cddedfdb4dc793e756/invoke.js"></scr' + 'ipt>');
+                            </script>
                         </div>
-
+                        
                         <div class="article-content">
                             <?php 
-                            $content = $row['postdetails'];
-                            $paragraphs = explode('</p>', $content);
-                            $paragraphCount = 0;
+                            $pt = $row['postdetails'];
+                            $content = substr($pt, 0);
                             
-                            foreach($paragraphs as $paragraph) {
-                                if(!empty(trim($paragraph))) {
+                            // Split content into paragraphs for ad insertion
+                            $paragraphs = explode('</p>', $content);
+                            $totalParagraphs = count($paragraphs);
+                            $adInserted = false;
+                            
+                            foreach($paragraphs as $index => $paragraph) {
+                                if (!empty(trim($paragraph))) {
                                     echo $paragraph . '</p>';
-                                    $paragraphCount++;
                                     
-                                    // Add direct link banner after 3rd paragraph
-                                    if($paragraphCount == 3) {
-                                        echo '<a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
-                                                <h4><i class="fas fa-star me-2"></i>🌟 Trending Now!</h4>
-                                                <p>Join millions who discovered something amazing - Click to see what everyone is talking about!</p>
-                                              </a>';
-                                    }
-                                    
-                                    // Add ad after 5th paragraph
-                                    if($paragraphCount == 5) {
-                                        echo '<div class="in-content-ad">
-                                                <div class="ad-label">Advertisement</div>
-                                                <script type="text/javascript"> atOptions = { \'key\' : \'cdf5eddb171fa0a9e01790ff8a001f23\', \'format\' : \'iframe\', \'height\' : 250, \'width\' : 300, \'params\' : {} }; </script> 
-                                                <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
+                                    // Insert ad in the middle of content
+                                    if (!$adInserted && $index > $totalParagraphs / 2) {
+                                        echo '<div class="content-break-ad" data-aos="fade-up">
+                                                <div class="ad-label">Sponsored Content</div>
+                                                <div class="direct-link-container" onclick="window.open(\'https://otieu.com/4/9724733\', \'_blank\')" style="margin: 1rem 0;">
+                                                    <div class="direct-link-title">💎 Premium Access</div>
+                                                    <div class="direct-link-subtitle">Unlock exclusive content and special features</div>
+                                                </div>
+                                                <script type="text/javascript">
+                                                    atOptions = {
+                                                        "key" : "521e77e0c57d2c5a0e07ddb91c825ebb",
+                                                        "format" : "iframe",
+                                                        "height" : 60,
+                                                        "width" : 468,
+                                                        "params" : {}
+                                                    };
+                                                    document.write("<scr" + "ipt type=\"text/javascript\" src=\"//www.highperformanceformat.com/521e77e0c57d2c5a0e07ddb91c825ebb/invoke.js\"></scr" + "ipt>");
+                                                </script>
                                               </div>';
-                                    }
-
-                                    // Add another direct link after 7th paragraph
-                                    if($paragraphCount == 7) {
-                                        echo '<a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
-                                                <h4><i class="fas fa-fire me-2"></i>🔥 Hot Deal Alert!</h4>
-                                                <p>Limited time offer - Don\'t let this opportunity slip away! Click now!</p>
-                                              </a>';
+                                        $adInserted = true;
                                     }
                                 }
                             }
                             ?>
-                        </div>
-                        
-                        <!-- Native Ad Container -->
-                        <div class="ad-container">
-                            <div class="ad-label">Sponsored Content</div>
-                            <script async="async" data-cfasync="false" src="//pl27432810.profitableratecpm.com/b2858f41c51f5ba6eabcf9f57fc86305/invoke.js"></script> 
-                            <div id="container-b2858f41c51f5ba6eabcf9f57fc86305"></div>
                         </div>
                         
                         <div class="article-visits">
@@ -735,11 +853,19 @@ if ($result->num_rows > 0) {
                         <?php } ?>
                     </div>
 
-                    <!-- Ad Between Article and Comments -->
-                    <div class="ad-container">
-                        <div class="ad-label">Advertisement</div>
-                        <script type="text/javascript"> atOptions = { 'key' : '60a75c7cae1585cddedfdb4dc793e756', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> 
-                        <script type="text/javascript" src="//www.highperformanceformat.com/60a75c7cae1585cddedfdb4dc793e756/invoke.js"></script>
+                    <!-- Post-Content Ad -->
+                    <div class="ad-container" data-aos="fade-up">
+                        <div class="ad-label">You Might Be Interested</div>
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key' : '473dbe0ba5e948b989fe71879b4a9faa',
+                                'format' : 'iframe',
+                                'height' : 600,
+                                'width' : 160,
+                                'params' : {}
+                            };
+                            document.write('<scr' + 'ipt type="text/javascript" src="//www.highperformanceformat.com/473dbe0ba5e948b989fe71879b4a9faa/invoke.js"></scr' + 'ipt>');
+                        </script>
                     </div>
                     
                     <!-- Comments Section -->
@@ -767,31 +893,40 @@ if ($result->num_rows > 0) {
                                 <p class="comment-text"><?php echo htmlentities($row['comment']);?></p>
                             </div>
                         </div>
+
                         <?php 
-                            // Add direct link banner after every 3 comments
-                            if ($commentCount % 3 == 0) {
-                                echo '<a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
-                                        <h4><i class="fas fa-gift me-2"></i>🎁 Special Bonus!</h4>
-                                        <p>Exclusive content waiting for you - Click to unlock!</p>
-                                      </a>';
-                            }
+                        // Insert ad every 3 comments
+                        if ($commentCount % 3 == 0) {
+                            echo '<div class="inline-ad" data-aos="fade-up">
+                                    <div class="ad-label">Advertisement</div>
+                                    <a href="https://otieu.com/4/9726604" target="_blank" class="interstitial-trigger">
+                                        <i class="fas fa-star me-2"></i>Discover Premium Features
+                                    </a>
+                                  </div>';
+                        }
+                        ?>
+
+                        <?php 
                             }
                         } else {
                             echo '<p class="text-center py-4">No comments yet. Be the first to comment!</p>';
                         }
                         ?>
                     </div>
-
-                    <!-- Ad Before Comment Form -->
-                    <div class="ad-container">
-                        <div class="ad-label">Advertisement</div>
-                        <script type="text/javascript"> atOptions = { 'key' : 'cdf5eddb171fa0a9e01790ff8a001f23', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> 
-                        <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
-                    </div>
                     
                     <!-- Comment Form -->
                     <div class="comment-form">
                         <h3 class="form-title">Leave a Comment</h3>
+                        
+                        <!-- Pre-form Ad -->
+                        <div class="inline-ad" style="margin-bottom: 2rem;">
+                            <div class="ad-label">Before You Comment</div>
+                            <div class="direct-link-container" onclick="window.open('https://otieu.com/4/9724733', '_blank')" style="margin: 1rem 0;">
+                                <div class="direct-link-title">📝 Join Our Community</div>
+                                <div class="direct-link-subtitle">Get exclusive access to premium discussions and content</div>
+                            </div>
+                        </div>
+
                         <form name="Comment" method="post">
                             <input type="hidden" name="csrftoken" value="<?php echo htmlentities($_SESSION['token']); ?>">
                             
@@ -819,60 +954,52 @@ if ($result->num_rows > 0) {
                 
                 <!-- Sidebar -->
                 <div class="col-lg-4">
-                    <!-- Sidebar Ad -->
-                    <div class="ad-container">
-                        <div class="ad-label">Advertisement</div>
-                        <script type="text/javascript"> atOptions = { 'key' : 'cdf5eddb171fa0a9e01790ff8a001f23', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> 
-                        <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
+                    <!-- Sidebar Ads -->
+                    <div class="sidebar-ad" data-aos="fade-left">
+                        <div class="ad-label">Recommended</div>
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key' : 'cdf5eddb171fa0a9e01790ff8a001f23',
+                                'format' : 'iframe',
+                                'height' : 250,
+                                'width' : 300,
+                                'params' : {}
+                            };
+                            document.write('<scr' + 'ipt type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></scr' + 'ipt>');
+                        </script>
                     </div>
 
-                    <!-- Direct Link Banner in Sidebar -->
-                    <a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
-                        <h4><i class="fas fa-lightning-bolt me-2"></i>⚡ Quick Access!</h4>
-                        <p>Fast track to exclusive content - One click away!</p>
-                    </a>
-
-                    <!-- Sidebar Skyscraper Ad -->
-                    <div class="ad-container">
-                        <div class="ad-label">Advertisement</div>
-                        <script type="text/javascript"> atOptions = { 'key' : '473dbe0ba5e948b989fe71879b4a9faa', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} }; </script> 
-                        <script type="text/javascript" src="//www.highperformanceformat.com/473dbe0ba5e948b989fe71879b4a9faa/invoke.js"></script>
+                    <!-- Direct Link in Sidebar -->
+                    <div class="sidebar-ad" data-aos="fade-left" data-aos-delay="200">
+                        <div class="ad-label">Special Offer</div>
+                        <div class="direct-link-container" onclick="window.open('https://otieu.com/4/9726604', '_blank')" style="margin: 0;">
+                            <div class="direct-link-title">🎁 Limited Time</div>
+                            <div class="direct-link-subtitle">Exclusive deals available now</div>
+                        </div>
                     </div>
 
                     <?php include('includes/sidebar.php');?>
 
-                    <!-- Another Sidebar Ad -->
-                    <div class="ad-container">
-                        <div class="ad-label">Advertisement</div>
-                        <script type="text/javascript"> atOptions = { 'key' : 'cdf5eddb171fa0a9e01790ff8a001f23', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> 
-                        <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
+                    <!-- Bottom Sidebar Ad -->
+                    <div class="sidebar-ad" data-aos="fade-left" data-aos-delay="400">
+                        <div class="ad-label">More Content</div>
+                        <a href="https://otieu.com/4/9724733" target="_blank" class="interstitial-trigger" style="width: 100%; margin: 0;">
+                            <i class="fas fa-plus-circle me-2"></i>Explore More
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Bottom Banner Ad -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="ad-container">
-                    <div class="ad-label">Advertisement</div>
-                    <script type="text/javascript"> atOptions = { 'key' : '60a75c7cae1585cddedfdb4dc793e756', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} }; </script> 
-                    <script type="text/javascript" src="//www.highperformanceformat.com/60a75c7cae1585cddedfdb4dc793e756/invoke.js"></script>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Final Direct Link Banner -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <a href="https://www.profitableratecpm.com/x1f39mnu?key=921207a921570605f990dc76ed566614" target="_blank" class="direct-link-banner">
-                    <h4><i class="fas fa-rocket me-2"></i>🚀 Last Chance!</h4>
-                    <p>Don't miss this incredible opportunity - Click before it's gone!</p>
-                </a>
+    <!-- Floating Ad (Desktop only) -->
+    <div class="floating-ad" id="floatingAd" style="display: none;">
+        <button class="floating-ad-close" onclick="document.getElementById('floatingAd').style.display='none'">&times;</button>
+        <div class="ad-label">Don't Miss Out</div>
+        <div style="cursor: pointer;" onclick="window.open('https://otieu.com/4/9726604', '_blank')">
+            <div style="padding: 15px; text-align: center; background: var(--primary-gradient); color: white; border-radius: 10px;">
+                <div style="font-weight: bold; margin-bottom: 8px;">🚀 Premium Access</div>
+                <div style="font-size: 12px;">Click for exclusive content</div>
             </div>
         </div>
     </div>
@@ -881,7 +1008,7 @@ if ($result->num_rows > 0) {
     <?php include('includes/footer.php');?>
 
     <!-- Scroll to top button -->
-    <button class="scroll-top" id="scrollTop">
+    <button class="scroll-top" id="scrollTop" style="opacity: 0; visibility: hidden;">
         <i class="fas fa-chevron-up"></i>
     </button>
 
@@ -904,14 +1031,21 @@ if ($result->num_rows > 0) {
             $('#loading').addClass('hide');
         }, 1000);
 
+        // Show floating ad after 8 seconds (desktop only)
+        if (window.innerWidth > 992) {
+            setTimeout(function() {
+                $('#floatingAd').fadeIn();
+            }, 8000);
+        }
+
         // Navbar scroll effect
         $(window).scroll(function() {
             if ($(this).scrollTop() > 100) {
                 $('.navbar').addClass('scrolled');
-                $('#scrollTop').addClass('show');
+                $('#scrollTop').css({opacity: 1, visibility: 'visible'});
             } else {
                 $('.navbar').removeClass('scrolled');
-                $('#scrollTop').removeClass('show');
+                $('#scrollTop').css({opacity: 0, visibility: 'hidden'});
             }
         });
 
@@ -919,6 +1053,22 @@ if ($result->num_rows > 0) {
         $('#scrollTop').click(function() {
             $('html, body').animate({scrollTop: 0}, 600);
         });
+
+        // Add click tracking for direct links and ads
+        $('.direct-link-container, .interstitial-trigger').on('click', function() {
+            // Track clicks if you have analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'click', {
+                    'event_category': 'advertisement',
+                    'event_label': 'direct_link_click'
+                });
+            }
+        });
+
+        // Auto-hide floating ad after 30 seconds
+        setTimeout(function() {
+            $('#floatingAd').fadeOut();
+        }, 30000);
 
         // Smooth scrolling for anchor links
         $('a[href^="#"]').on('click', function(event) {
@@ -931,17 +1081,256 @@ if ($result->num_rows > 0) {
             }
         });
 
-        // Direct link banner click tracking
-        $('.direct-link-banner').on('click', function() {
-            // Add click tracking if needed
-            console.log('Direct link clicked from news details');
+        // Reading progress bar
+        var progressBar = $('<div>', {
+            css: {
+                position: 'fixed',
+                top: '0',
+                left: '0',
+                width: '0%',
+                height: '3px',
+                background: 'var(--accent-gradient)',
+                zIndex: '9999',
+                transition: 'width 0.3s ease'
+            }
+        }).appendTo('body');
+
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            var height = $(document).height() - $(window).height();
+            var progress = (scroll / height) * 100;
+            progressBar.css('width', progress + '%');
         });
 
-        // Enhanced reading experience
-        $('.article-content').on('scroll', function() {
-            // Add reading progress tracking if needed
+        // Lazy loading for ads
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const adContainer = entry.target;
+                    if (!adContainer.classList.contains('loaded')) {
+                        adContainer.classList.add('loaded');
+                        // Add any ad-specific loading logic here
+                    }
+                }
+            });
         });
+
+        // Observe all ad containers
+        document.querySelectorAll('.ad-container, .sidebar-ad, .inline-ad').forEach(ad => {
+            observer.observe(ad);
+        });
+
+        // Add hover effects to direct link containers
+        $('.direct-link-container').hover(
+            function() {
+                $(this).css('transform', 'translateY(-5px) scale(1.02)');
+            },
+            function() {
+                $(this).css('transform', 'translateY(0) scale(1)');
+            }
+        );
+
+        // Social share tracking
+        $('.share-btn').on('click', function() {
+            var platform = $(this).find('i').attr('class').split('-')[1];
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'share', {
+                    'event_category': 'social',
+                    'event_label': platform
+                });
+            }
+        });
+
+        // Form submission enhancement
+        $('form[name="Comment"]').on('submit', function(e) {
+            var submitBtn = $(this).find('.submit-btn');
+            submitBtn.html('<i class="fas fa-spinner fa-spin me-2"></i>Posting...');
+            submitBtn.prop('disabled', true);
+        });
+
+        // Add entrance animations to comments
+        $('.comment').each(function(index) {
+            $(this).css({
+                'opacity': '0',
+                'transform': 'translateX(-30px)'
+            }).delay(index * 100).animate({
+                'opacity': '1'
+            }, 500, function() {
+                $(this).css('transform', 'translateX(0)');
+            });
+        });
+
+        // Interactive elements
+        $('.card-bookmark, .share-btn').hover(
+            function() {
+                $(this).css('transform', 'scale(1.1)');
+            },
+            function() {
+                $(this).css('transform', 'scale(1)');
+            }
+        );
+
+        // Auto-refresh ads every 5 minutes to increase impressions
+        setInterval(function() {
+            // This would refresh ad containers if needed
+            $('.ad-container').addClass('refreshing');
+            setTimeout(function() {
+                $('.ad-container').removeClass('refreshing');
+            }, 1000);
+        }, 300000); // 5 minutes
     });
+
+    // Ad interaction tracking function
+    function trackAdClick(adType, url) {
+        // Track ad clicks for analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'ad_click', {
+                'event_category': 'advertisement',
+                'event_label': adType,
+                'value': 1
+            });
+        }
+        
+        // Optional: Send to your own analytics
+        if (typeof fetch !== 'undefined') {
+            fetch('/track-ad-click.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    type: adType,
+                    url: url,
+                    page: window.location.href,
+                    timestamp: Date.now()
+                })
+            }).catch(() => {
+                // Ignore errors
+            });
+        }
+        
+        // Open URL
+        window.open(url, '_blank');
+    }
+
+    // Progressive Web App features
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                console.log('ServiceWorker registration successful');
+            }, function(err) {
+                console.log('ServiceWorker registration failed');
+            });
+        });
+    }
+
+    // Add custom loading styles
+    var loadingStyle = document.createElement('style');
+    loadingStyle.textContent = `
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        .loading.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .ad-container.refreshing {
+            opacity: 0.7;
+            transform: scale(0.98);
+            transition: all 0.3s ease;
+        }
+    `;
+    document.head.appendChild(loadingStyle);
+    </script>
+
+    <!-- Additional Ad Scripts for Enhanced Performance -->
+    <script>
+    // Rotate direct links for better CTR
+    const directLinks = [
+        {
+            url: 'https://otieu.com/4/9726604',
+            title: '🎯 Discover Amazing Offers',
+            subtitle: 'Click here to explore exclusive deals and content'
+        },
+        {
+            url: 'https://otieu.com/4/9724733',
+            title: '💰 Exclusive Deals Await',
+            subtitle: 'Don\'t miss out on limited-time offers and premium content'
+        },
+        {
+            url: 'https://otieu.com/4/9726604',
+            title: '🔥 Breaking: Premium Access',
+            subtitle: 'Unlock exclusive content and special features'
+        }
+    ];
+
+    // Rotate direct link content every 10 seconds
+    let currentLinkIndex = 0;
+    setInterval(function() {
+        const containers = document.querySelectorAll('.direct-link-container');
+        containers.forEach(container => {
+            const title = container.querySelector('.direct-link-title');
+            const subtitle = container.querySelector('.direct-link-subtitle');
+            if (title && subtitle) {
+                const link = directLinks[currentLinkIndex];
+                title.textContent = link.title;
+                subtitle.textContent = link.subtitle;
+                container.onclick = function() { 
+                    trackAdClick('direct_link', link.url); 
+                };
+            }
+        });
+        currentLinkIndex = (currentLinkIndex + 1) % directLinks.length;
+    }, 10000);
     </script>
 </body>
 </html>
