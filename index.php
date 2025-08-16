@@ -14,7 +14,7 @@ include('includes/config.php');
     <title>TopCentral.news - Breaking News & Latest Updates</title>
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
@@ -702,6 +702,11 @@ include('includes/config.php');
                                 <?php } ?>
                             </div>
                         </div>
+                        <!-- 160x600 Ad Unit -->
+                        <div class="ad-unit mt-4 text-center">
+                            <script type="text/javascript"> atOptions = { 'key' : '473dbe0ba5e948b989fe71879b4a9faa', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} }; </script> 
+                            <script type="text/javascript" src="//www.highperformanceformat.com/473dbe0ba5e948b989fe71879b4a9faa/invoke.js"></script>
+                        </div>
                     </div>
                 </div>
 
@@ -764,6 +769,11 @@ include('includes/config.php');
                             </button>
                         </div>
                     </div>
+                    <!-- 468x60 Ad Unit -->
+                    <div class="ad-unit text-center my-4">
+                        <script type="text/javascript"> atOptions = { 'key' : '521e77e0c57d2c5a0e07ddb91c825ebb', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} }; </script> 
+                        <script type="text/javascript" src="//www.highperformanceformat.com/521e77e0c57d2c5a0e07ddb91c825ebb/invoke.js"></script>
+                    </div>
                 </div>
             </div>
         </div>
@@ -804,7 +814,9 @@ include('includes/config.php');
                                             LIMIT $offset, $no_of_records_per_page");
                 
                 $delay = 0;
+                $post_count = 0; // Counter to insert ads
                 while ($row = mysqli_fetch_array($query)) {
+                    $post_count++;
                 ?>
                 <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="<?php echo $delay; ?>">
                     <article class="news-card">
@@ -845,6 +857,18 @@ include('includes/config.php');
                 </div>
                 <?php 
                 $delay += 100;
+                // Insert 300x250 ad after every 4th news card
+                if ($post_count % 4 == 0) {
+                ?>
+                <div class="col-lg-6 col-md-6 mb-4 d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="<?php echo $delay; ?>">
+                    <div class="ad-unit text-center" style="width: 300px; height: 250px; border: 1px solid #eee; display: flex; align-items: center; justify-content: center;">
+                        <script type="text/javascript"> atOptions = { 'key' : 'cdf5eddb171fa0a9e01790ff8a001f23', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script> 
+                        <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
+                    </div>
+                </div>
+                <?php
+                $delay += 100; // Increment delay for the ad unit as well
+                }
                 } ?>
             </div>
 
@@ -902,6 +926,16 @@ include('includes/config.php');
     <!-- Footer -->
     <?php include('includes/footer.php');?>
 
+    <!-- Popunder Ad -->
+    <script async="async" data-cfasync="false" src="//pl27432810.profitableratecpm.com/b2858f41c51f5ba6eabcf9f57fc86305/invoke.js"></script> 
+    <div id="container-b2858f41c51f5ba6eabcf9f57fc86305"></div>
+
+    <!-- SocialBar Ad -->
+    <script type='text/javascript' src='//pl27432873.profitableratecpm.com/b0/c9/22/b0c92206ec7bc13315cd757b3faa6ebf.js'></script>
+
+    <!-- DirectLink Ad (This will open a new tab/window on user interaction) -->
+    <!-- You might want to trigger this on a specific user action, or it will activate on page load -->
+    <!-- <script type='text/javascript' src='//pl27432355.profitableratecpm.com/cc/d2/ab/ccd2ab98de64c642a22b991d50b07112.js'></script> -->
 
 
     <!-- Scripts -->
