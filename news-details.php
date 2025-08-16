@@ -535,6 +535,20 @@ if ($result->num_rows > 0) {
                         </div>
                         <?php } ?>
                     </div>
+
+                    <!-- Ad Unit: 468x60 Iframe Ad -->
+                    <div class="text-center my-4">
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key' : '521e77e0c57d2c5a0e07ddb91c825ebb',
+                                'format' : 'iframe',
+                                'height' : 60,
+                                'width' : 468,
+                                'params' : {}
+                            };
+                        </script>
+                        <script type="text/javascript" src="//www.highperformanceformat.com/521e77e0c57d2c5a0e07ddb91c825ebb/invoke.js"></script>
+                    </div>
                     
                     <!-- Comments Section -->
                     <div class="comments-section">
@@ -598,6 +612,41 @@ if ($result->num_rows > 0) {
                 <!-- Sidebar -->
                 <div class="col-lg-4">
                     <?php include('includes/sidebar.php');?>
+
+                    <!-- Ad Unit: 160x600 Iframe Ad -->
+                    <div class="sidebar-ad my-4 text-center">
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key' : '473dbe0ba5e948b989fe71879b4a9faa',
+                                'format' : 'iframe',
+                                'height' : 600,
+                                'width' : 160,
+                                'params' : {}
+                            };
+                        </script>
+                        <script type="text/javascript" src="//www.highperformanceformat.com/473dbe0ba5e948b989fe71879b4a9faa/invoke.js"></script>
+                    </div>
+
+                    <!-- Ad Unit: 300x250 Iframe Ad -->
+                    <div class="sidebar-ad my-4 text-center">
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key' : 'cdf5eddb171fa0a9e01790ff8a001f23',
+                                'format' : 'iframe',
+                                'height' : 250,
+                                'width' : 300,
+                                'params' : {}
+                            };
+                        </script>
+                        <script type="text/javascript" src="//www.highperformanceformat.com/cdf5eddb171fa0a9e01790ff8a001f23/invoke.js"></script>
+                    </div>
+
+                    <!-- Ad Unit: Native Banner Ad (Async) -->
+                    <div class="sidebar-ad my-4">
+                        <script async="async" data-cfasync="false" src="//pl27432810.profitableratecpm.com/b2858f41c51f5ba6eabcf9f57fc86305/invoke.js"></script>
+                        <div id="container-b2858f41c51f5ba6eabcf9f57fc86305"></div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -606,7 +655,11 @@ if ($result->num_rows > 0) {
     <!-- Footer -->
     <?php include('includes/footer.php');?>
 
+    <!-- Ad Unit: Popunder (JS SYNC) -->
+    <script type='text/javascript' src='//pl27432355.profitableratecpm.com/cc/d2/ab/ccd2ab98de64c642a22b991d50b07112.js'></script>
 
+    <!-- Ad Unit: SocialBar (JS SYNC) -->
+    <script type='text/javascript' src='//pl27432873.profitableratecpm.com/b0/c9/22/b0c92206ec7bc13315cd757b3faa6ebf.js'></script>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
