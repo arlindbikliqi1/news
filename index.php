@@ -214,7 +214,7 @@ include('includes/config.php');
         }
 
         .direct-link-container:before {
-            content: '🎯';
+            content: 'ðŸŽ¯';
             position: absolute;
             top: -10px;
             right: -10px;
@@ -893,6 +893,34 @@ include('includes/config.php');
     <script type='text/javascript' src='//pl27432873.profitableratecpm.com/b0/c9/22/b0c92206ec7bc13315cd757b3faa6ebf.js'></script>
 
     <script async="async" data-cfasync="false" src="//pl27432810.profitableratecpm.com/b2858f41c51f5ba6eabcf9f57fc86305/invoke.js"></script>
+    
+    <!-- PopCash Scripts -->
+    <script type="text/javascript"> 
+        var uid = '493916'; 
+        var wid = '744646'; 
+        var pop_fback = 'up'; 
+        var pop_tag = document.createElement('script');
+        pop_tag.src='//cdn.popcash.net/show.js';
+        document.body.appendChild(pop_tag); 
+        pop_tag.onerror = function() {
+            pop_tag = document.createElement('script');
+            pop_tag.src='//cdn2.popcash.net/show.js';
+            document.body.appendChild(pop_tag)
+        }; 
+    </script>
+    
+    <script type="text/javascript"> 
+        var uid = '493916'; 
+        var wid = '744646'; 
+        var pop_tag = document.createElement('script');
+        pop_tag.src='//cdn.popcash.net/show.js';
+        document.body.appendChild(pop_tag); 
+        pop_tag.onerror = function() {
+            pop_tag = document.createElement('script');
+            pop_tag.src='//cdn2.popcash.net/show.js';
+            document.body.appendChild(pop_tag)
+        }; 
+    </script>
 </head>
 
 <body>
