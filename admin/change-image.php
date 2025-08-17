@@ -1,11 +1,4 @@
-<!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
---><?php 
+<?php 
    session_start();
    include('includes/config.php');
    error_reporting(0);
@@ -48,15 +41,6 @@
    }
    }
    ?>
-<!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
-<!-- Top Bar Start -->
 <?php include('includes/topheader.php');?>
 <script>
 function getSubCat(val) {
@@ -70,12 +54,8 @@ function getSubCat(val) {
     });
 }
 </script>
-<!-- ========== Left Sidebar Start ========== -->
 <?php include('includes/leftsidebar.php');?>
-<!-- Left Sidebar End -->
-<!-- ============================================================== -->
-<!-- Start right Content here -->
-<!-- ============================================================== -->
+
 <div class="content-page">
     <!-- Start content -->
     <div class="content">
@@ -119,15 +99,8 @@ function getSubCat(val) {
                     <?php } ?>
                 </div>
             </div>
-            <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
-            <form name="addpost" method="post" enctype="multipart/form-data">
+
+          <form name="addpost" method="post" enctype="multipart/form-data">
                 <?php
             $postid=intval($_GET['pid']);
             $query=mysqli_query($con,"select PostImage,PostTitle from tblposts where id='$postid' and Is_Active=1 ");
@@ -152,14 +125,7 @@ function getSubCat(val) {
                                             </div>
                                         </div>
                                     </div>
-                                    <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
+    
                                     <?php } ?>
                                     <div class="row">
                                         <div class="col-sm-12">
@@ -172,21 +138,10 @@ function getSubCat(val) {
                                     <button type="submit" name="update" class="btn btn-success waves-effect waves-light">Update </button>
                                 </form>
                             </div>
-                        </div> <!-- end p-20 -->
-                    </div> <!-- end col -->
+                        </div> 
+                    </div> 
                 </div>
-                <!-- end row -->
         </div>
-        <!-- container -->
     </div>
-    <!-- content -->
     <?php include('includes/footer.php');?>
-    <!--  
-  Author Name: MH RONY.
-  GigHub Link: https://github.com/dev-mhrony
-  Facebook Link:https://www.facebook.com/dev.mhrony
-  Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
-  for any PHP, Laravel, Python, Dart, Flutter work contact me at developer.mhrony@gmail.com  
-  Visit My Website : developerrony.com 
--->
-    <?php } ?>
+ <?php } ?>
